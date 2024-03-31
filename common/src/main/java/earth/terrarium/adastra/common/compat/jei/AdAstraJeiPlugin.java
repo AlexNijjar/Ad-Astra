@@ -6,6 +6,7 @@ import earth.terrarium.adastra.common.compat.jei.categories.*;
 import earth.terrarium.adastra.common.registry.ModCreativeTab;
 import earth.terrarium.adastra.common.registry.ModItems;
 import earth.terrarium.adastra.common.registry.ModRecipeTypes;
+import me.shedaniel.rei.plugincompatibilities.api.REIPluginCompatIgnore;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.helpers.IGuiHelper;
@@ -18,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Objects;
 
 @JeiPlugin
+@REIPluginCompatIgnore
 public class AdAstraJeiPlugin implements IModPlugin {
     @Override
     public @NotNull ResourceLocation getPluginUid() {
