@@ -8,20 +8,14 @@
   },
   "downfall": 1.0,
   "effects": {
-    "fog_color": 13732690,
+    "fog_color": 16382330,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
       "sound": "minecraft:ambient.cave",
       "tick_delay": 6000
     },
-    "particle": {
-      "options": {
-        "type": "minecraft:crimson_spore"
-      },
-      "probability": 0.014
-    },
-    "sky_color": 13732690,
+    "sky_color": 16382276,
     "water_color": 4159204,
     "water_fog_color": 329011
   },

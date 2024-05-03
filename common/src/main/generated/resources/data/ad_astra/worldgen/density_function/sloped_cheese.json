@@ -1,0 +1,76 @@
+{
+  "argument1": {
+    "argument1": 4,
+    "argument2": {
+      "argument": {
+        "argument1": {
+          "argument1": "ad_astra:depth",
+          "argument2": {
+            "argument1": {
+              "argument": {
+                "argument": {
+                  "argument1": {
+                    "argument1": 0,
+                    "argument2": {
+                      "argument1": 1,
+                      "argument2": {
+                        "argument1": -1,
+                        "argument2": {
+                          "argument": {
+                            "type": "minecraft:blend_alpha"
+                          },
+                          "type": "minecraft:cache_once"
+                        },
+                        "type": "minecraft:mul"
+                      },
+                      "type": "minecraft:add"
+                    },
+                    "type": "minecraft:mul"
+                  },
+                  "argument2": {
+                    "argument1": {
+                      "type": "minecraft:clamp",
+                      "min": 0,
+                      "max": 1.28,
+                      "input": {
+                        "type": "minecraft:spline",
+                        "spline": 0
+                      }
+                    },
+                    "argument2": {
+                      "argument": {
+                        "type": "minecraft:blend_alpha"
+                      },
+                      "type": "minecraft:cache_once"
+                    },
+                    "type": "minecraft:mul"
+                  },
+                  "type": "minecraft:add"
+                },
+                "type": "minecraft:cache_2d"
+              },
+              "type": "minecraft:flat_cache"
+            },
+            "argument2": {
+              "argument": {
+                "noise": "minecraft:jagged",
+                "xz_scale": 1500,
+                "y_scale": 0,
+                "type": "minecraft:noise"
+              },
+              "type": "minecraft:half_negative"
+            },
+            "type": "minecraft:mul"
+          },
+          "type": "minecraft:add"
+        },
+        "argument2": "ad_astra:factor",
+        "type": "minecraft:mul"
+      },
+      "type": "minecraft:quarter_negative"
+    },
+    "type": "minecraft:mul"
+  },
+  "argument2": "ad_astra:base_3d_noise",
+  "type": "minecraft:add"
+}

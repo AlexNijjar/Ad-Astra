@@ -1,0 +1,45 @@
+{
+  "argument": {
+    "argument": {
+      "argument1": {
+        "argument1": 10,
+        "argument2": {
+          "argument1": 1,
+          "argument2": {
+            "argument1": -1,
+            "argument2": {
+              "argument": {
+                "type": "minecraft:blend_alpha"
+              },
+              "type": "minecraft:cache_once"
+            },
+            "type": "minecraft:mul"
+          },
+          "type": "minecraft:add"
+        },
+        "type": "minecraft:mul"
+      },
+      "argument2": {
+        "argument1": {
+          "type": "minecraft:clamp",
+          "min": 0,
+          "max": 8,
+          "input": {
+            "type": "minecraft:spline",
+            "spline": 4
+          }
+        },
+        "argument2": {
+          "argument": {
+            "type": "minecraft:blend_alpha"
+          },
+          "type": "minecraft:cache_once"
+        },
+        "type": "minecraft:mul"
+      },
+      "type": "minecraft:add"
+    },
+    "type": "minecraft:cache_2d"
+  },
+  "type": "minecraft:flat_cache"
+}

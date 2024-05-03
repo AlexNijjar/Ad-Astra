@@ -1,0 +1,36 @@
+{
+  "type": "ad_astra:venus",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "ad_astra:venus",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "ad_astra:venus_wastelands",
+          "parameters": {
+            "temperature": 1,
+            "humidity": -1,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": -0.5,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "ad_astra:infernal_venus_barrens",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": -0.65,
+            "erosion": 0,
+            "weirdness": -1.5,
+            "depth": 0,
+            "offset": 0
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "argument1": {
+    "from_y": -64,
+    "to_y": 320,
+    "from_value": 1.5,
+    "to_value": -1.5,
+    "type": "minecraft:y_clamped_gradient"
+  },
+  "argument2": {
+    "argument": {
+      "argument": {
+        "argument1": {
+          "argument1": {
+            "type": "minecraft:blend_offset"
+          },
+          "argument2": {
+            "argument1": 1,
+            "argument2": {
+              "argument1": -1,
+              "argument2": {
+                "argument": {
+                  "type": "minecraft:blend_alpha"
+                },
+                "type": "minecraft:cache_once"
+              },
+              "type": "minecraft:mul"
+            },
+            "type": "minecraft:add"
+          },
+          "type": "minecraft:mul"
+        },
+        "argument2": {
+          "argument1": {
+            "type": "minecraft:clamp",
+            "min": -0.81,
+            "max": 2.5,
+            "input": {
+              "type": "minecraft:add",
+              "argument1": -0.5037500262260437,
+              "argument2": {
+                "type": "minecraft:spline",
+                "spline": 0.3
+              }
+            }
+          },
+          "argument2": {
+            "argument": {
+              "type": "minecraft:blend_alpha"
+            },
+            "type": "minecraft:cache_once"
+          },
+          "type": "minecraft:mul"
+        },
+        "type": "minecraft:add"
+      },
+      "type": "minecraft:cache_2d"
+    },
+    "type": "minecraft:flat_cache"
+  },
+  "type": "minecraft:add"
+}

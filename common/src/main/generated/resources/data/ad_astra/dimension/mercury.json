@@ -1,0 +1,24 @@
+{
+  "type": "ad_astra:mercury",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "ad_astra:mercury",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "ad_astra:mercury_deltas",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        }
+      ]
+    }
+  }
+}
