@@ -8,7 +8,7 @@
       "type": "patchouli:spotlight",
       "title": "Coal Generator",
       "item": "ad_astra:coal_generator",
-      "text": "Energy is core resource of Ad Astra. It's used in all machines and is required for everything. There are multiple ways to generate energy, the most basic way being the coal generator. It uses burnable resources like wood or coal to generate energy."
+      "text": "Energy is a core resource of Ad Astra. It's used in all machines and is required for everything. There are multiple ways to generate energy, the most basic way being the coal generator. It uses burnable resources like wood or coal to generate energy."
     },
     {
       "type": "patchouli:crafting",
