@@ -59,6 +59,11 @@
             "url": "https://play.sas-media.ru/play_256",
             "title": "Noise FM",
             "name": "Noise FM"
+        },
+        {
+            "url": "https://27953.live.streamtheworld.com/LOS40_ASO_GUADIXAAC.aac",
+            "title": "Los 40",
+            "name": "Los 40"
         }
     ]
 }
