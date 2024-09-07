@@ -1,0 +1,83 @@
+{
+  "world": "ad_astra:moon_orbit",
+  "stars": {
+    "fancy_count": 13000,
+    "fast_count": 6000,
+    "colored_stars": true,
+    "daylight_visible": true
+  },
+  "sunset_color": "vanilla",
+  "dimension_effects": {
+    "type": "none"
+  },
+  "cloud_effects": "none",
+  "weather_effects": "none",
+  "horizon_angle": 0,
+  "sky_objects": [
+    {
+      "texture": "ad_astra:textures/environment/sun.png",
+      "blending": true,
+      "render_type": "dynamic",
+      "scale": 45.0,
+      "rotation": [
+        0.0,
+        -90.0,
+        0.0
+      ]
+    },
+    {
+      "texture": "ad_astra:textures/environment/moon.png",
+      "blending": false,
+      "render_type": "scaling",
+      "scale": 1.0,
+      "rotation": [
+        180.0,
+        180.0,
+        0.0
+      ]
+    },
+    {
+      "texture": "ad_astra:textures/environment/light.png",
+      "blending": true,
+      "render_type": "scaling",
+      "scale": 3.0,
+      "color": {
+        "r": 255,
+        "g": 255,
+        "b": 230
+      },
+      "rotation": [
+        180.0,
+        180.0,
+        0.0
+      ]
+    },
+    {
+      "texture": "ad_astra:textures/environment/earth.png",
+      "blending": false,
+      "render_type": "static",
+      "scale": 9.0,
+      "rotation": [
+        30.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "texture": "ad_astra:textures/environment/light.png",
+      "blending": true,
+      "render_type": "static",
+      "scale": 25.0,
+      "color": {
+        "r": 128,
+        "g": 191,
+        "b": 255
+      },
+      "rotation": [
+        30.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

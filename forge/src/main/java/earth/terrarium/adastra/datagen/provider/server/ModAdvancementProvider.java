@@ -9,8 +9,10 @@ import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.FrameType;
 import net.minecraft.advancements.critereon.*;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -233,7 +235,7 @@ public class ModAdvancementProvider extends ForgeAdvancementProvider {
                     true,
                     false
                 )
-                .addCriterion("entered_moon", ChangeDimensionTrigger.TriggerInstance.changedDimensionTo(Planet.MOON))
+                .addCriterion("entered_moon", ChangeDimensionTrigger.TriggerInstance.changedDimensionTo(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "moon"))))
                 .rewards(AdvancementRewards.Builder.experience(100))
                 .save(consumer, path("moon"));
 
@@ -328,7 +330,7 @@ public class ModAdvancementProvider extends ForgeAdvancementProvider {
                     true,
                     false
                 )
-                .addCriterion("entered_mars", ChangeDimensionTrigger.TriggerInstance.changedDimensionTo(Planet.MARS))
+                .addCriterion("entered_mars", ChangeDimensionTrigger.TriggerInstance.changedDimensionTo(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mars"))))
                 .rewards(AdvancementRewards.Builder.experience(100))
                 .save(consumer, path("mars"));
 
@@ -429,7 +431,7 @@ public class ModAdvancementProvider extends ForgeAdvancementProvider {
                     true,
                     false
                 )
-                .addCriterion("entered_venus", ChangeDimensionTrigger.TriggerInstance.changedDimensionTo(Planet.VENUS))
+                .addCriterion("entered_venus", ChangeDimensionTrigger.TriggerInstance.changedDimensionTo(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "venus"))))
                 .rewards(AdvancementRewards.Builder.experience(200))
                 .save(consumer, path("venus"));
 
@@ -445,7 +447,7 @@ public class ModAdvancementProvider extends ForgeAdvancementProvider {
                     true,
                     false
                 )
-                .addCriterion("entered_mercury", ChangeDimensionTrigger.TriggerInstance.changedDimensionTo(Planet.MERCURY))
+                .addCriterion("entered_mercury", ChangeDimensionTrigger.TriggerInstance.changedDimensionTo(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mercury"))))
                 .rewards(AdvancementRewards.Builder.experience(200))
                 .save(consumer, path("mercury"));
 
@@ -498,7 +500,7 @@ public class ModAdvancementProvider extends ForgeAdvancementProvider {
                     true,
                     false
                 )
-                .addCriterion("entered_glacio", ChangeDimensionTrigger.TriggerInstance.changedDimensionTo(Planet.GLACIO))
+                .addCriterion("entered_glacio", ChangeDimensionTrigger.TriggerInstance.changedDimensionTo(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "glacio"))))
                 .rewards(AdvancementRewards.Builder.experience(300))
                 .save(consumer, path("interstellar"));
         }

@@ -1,0 +1,13 @@
+{
+  "button_color": "BLACK",
+  "days_in_year": 0.0,
+  "dimension": "ad_astra:trappist_1_e_orbit",
+  "galaxy": "ad_astra:milky_way",
+  "gravity": 0.0,
+  "oxygen": false,
+  "solar_power": 36,
+  "solar_system": "ad_astra:trappist_1",
+  "temperature": -270,
+  "tier": 4,
+  "translation": "ad_astra:trappist_1_e_orbit"
+}

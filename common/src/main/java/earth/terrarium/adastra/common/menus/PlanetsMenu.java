@@ -3,6 +3,7 @@ package earth.terrarium.adastra.common.menus;
 import com.mojang.authlib.GameProfile;
 import com.mojang.datafixers.util.Pair;
 import earth.terrarium.adastra.api.planets.Planet;
+import earth.terrarium.adastra.client.resourcepack.SolarSystem;
 import earth.terrarium.adastra.client.screens.PlanetsScreen;
 import earth.terrarium.adastra.common.compat.argonauts.ArgonautsIntegration;
 import earth.terrarium.adastra.common.entities.vehicles.Rocket;
@@ -200,4 +201,5 @@ public class PlanetsMenu extends AbstractContainerMenu {
             .sorted(Comparator.comparingInt(Planet::tier).thenComparing(p -> getPlanetName(p.dimension()).getString()))
             .toList();
     }
+
 }

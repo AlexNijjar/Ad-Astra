@@ -1,0 +1,6 @@
+{
+  "galaxy": "ad_astra:milky_way",
+  "texture": "ad_astra:textures/environment/milky_way.png",
+  "button_color": "purple",
+  "scale": 250
+}

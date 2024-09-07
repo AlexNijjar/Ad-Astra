@@ -4,7 +4,6 @@
   "package": "earth.terrarium.adastra.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "common.EntityBelowWorldMixin",
     "common.LivingEntityAccessor",
     "common.LivingEntityMixin",
     "common.MobMixin",
@@ -42,7 +41,6 @@
     "client.PlayerRendererMixin",
     "client.SoundEngineAccessor",
     "client.SoundManagerAccessor",
-    "client.SoundManagerMixin",
     "client.multipart.ClientLevelEntityCallbacksMixin",
     "client.multipart.EntityRenderDispatcherMixin"
   ],

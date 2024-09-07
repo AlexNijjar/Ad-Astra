@@ -20,6 +20,9 @@ public class ModNoiseGeneratorSettingsProvider {
     public static final ResourceKey<NoiseGeneratorSettings> VENUS = register("venus");
     public static final ResourceKey<NoiseGeneratorSettings> MERCURY = register("mercury");
     public static final ResourceKey<NoiseGeneratorSettings> GLACIO = register("glacio");
+    public static final ResourceKey<NoiseGeneratorSettings> DEIMOS = register("deimos");
+    public static final ResourceKey<NoiseGeneratorSettings> EOS = register("eos");
+    public static final ResourceKey<NoiseGeneratorSettings> TRAPPIST_1_E = register("trappist_1_e");
 
     protected static final NoiseSettings SIMPLE_NOISE_SETTINGS = NoiseSettings.create(0, 256, 2, 1);
 

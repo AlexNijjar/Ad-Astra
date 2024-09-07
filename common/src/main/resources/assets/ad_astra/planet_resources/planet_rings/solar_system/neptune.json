@@ -1,0 +1,8 @@
+{
+  "galaxy": "ad_astra:milky_way",
+  "solar_system": "ad_astra:solar_system",
+  "texture": "ad_astra:textures/environment/neptune.png",
+  "speed": 60190,
+  "scale": 13,
+  "radius": 8.0
+}

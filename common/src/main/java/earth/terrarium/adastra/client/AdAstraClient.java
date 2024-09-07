@@ -19,12 +19,17 @@ import earth.terrarium.adastra.client.renderers.entities.vehicles.LanderRenderer
 import earth.terrarium.adastra.client.renderers.entities.vehicles.RocketRenderer;
 import earth.terrarium.adastra.client.renderers.entities.vehicles.RoverRenderer;
 import earth.terrarium.adastra.client.renderers.world.OverlayRenderer;
+import earth.terrarium.adastra.client.resourcepack.Galaxy;
+import earth.terrarium.adastra.client.resourcepack.PlanetResources;
+import earth.terrarium.adastra.client.resourcepack.PlanetRing;
+import earth.terrarium.adastra.client.resourcepack.SolarSystem;
 import earth.terrarium.adastra.client.screens.PlanetsScreen;
 import earth.terrarium.adastra.client.screens.machines.*;
 import earth.terrarium.adastra.client.screens.player.OverlayScreen;
 import earth.terrarium.adastra.client.screens.vehicles.LanderScreen;
 import earth.terrarium.adastra.client.screens.vehicles.RocketScreen;
 import earth.terrarium.adastra.client.screens.vehicles.RoverScreen;
+import earth.terrarium.adastra.client.utils.Category;
 import earth.terrarium.adastra.common.constants.ConstantComponents;
 import earth.terrarium.adastra.common.items.EtrionicCapacitorItem;
 import earth.terrarium.adastra.common.network.NetworkHandler;
@@ -55,12 +60,22 @@ import net.minecraft.world.item.DyeableArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 public class AdAstraClient {
     public static final OverlayRenderer OXYGEN_OVERLAY_RENDERER = new OverlayRenderer(0x4099ccff, () -> AdAstraConfigClient.showOxygenDistributorArea, ModBlocks.OXYGEN_DISTRIBUTOR);
     public static final OverlayRenderer GRAVITY_OVERLAY_RENDERER = new OverlayRenderer(0x40DE2F14, () -> AdAstraConfigClient.showGravityNormalizerArea, ModBlocks.GRAVITY_NORMALIZER);
+
+    public static boolean hasUpdatedPlanets;
+    public static List<PlanetRing> planetRings = new ArrayList<>();
+//    private Category currentCategory = Category.GALAXY_CATEGORY;
+    private Category currentCategory = new Category(new ResourceLocation(AdAstra.MOD_ID, "galaxy"), null);
+
+    public static List<SolarSystem> solarSystems = new ArrayList<>();
+    public static List<Galaxy> galaxies = new ArrayList<>();
 
     public static final KeyMapping KEY_TOGGLE_SUIT_FLIGHT = new KeyMapping(
         ConstantComponents.TOGGLE_SUIT_FLIGHT_KEY.getString(),
@@ -80,7 +95,7 @@ public class AdAstraClient {
         registerItemProperties();
         registerRenderLayers();
         registerArmor();
-    }
+	}
 
     private static void registerScreens() {
         MenuScreens.register(ModMenus.COAL_GENERATOR.get(), CoalGeneratorScreen::new);
@@ -222,6 +237,7 @@ public class AdAstraClient {
 
     public static void onAddReloadListener(BiConsumer<ResourceLocation, PreparableReloadListener> consumer) {
         consumer.accept(new ResourceLocation(AdAstra.MOD_ID, "planet_renderers"), new AdAstraPlanetRenderers());
+        consumer.accept(new ResourceLocation(AdAstra.MOD_ID, "planet_resources"), new PlanetResources());
     }
 
     public static void clientTick(Minecraft minecraft) {

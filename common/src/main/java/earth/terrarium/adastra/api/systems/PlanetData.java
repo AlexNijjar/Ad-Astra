@@ -1,12 +1,32 @@
 package earth.terrarium.adastra.api.systems;
 
-import java.util.Objects;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.mojang.serialization.JsonOps;
+import earth.terrarium.adastra.AdAstra;
+import earth.terrarium.adastra.api.planets.Planet;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener;
+import net.minecraft.util.GsonHelper;
+import net.minecraft.util.profiling.ProfilerFiller;
+import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.*;
+
 
 /**
  * A mutable data class that stores the oxygen, temperature, and gravity of a planet.
  * Data is packed into a single integer for efficient storage and transmission.
  */
-public final class PlanetData {
+public final class PlanetData  extends SimpleJsonResourceReloadListener {
+
+    public static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
+
     private static final int OXYGEN_BIT_LENGTH = 1; // boolean
     private static final int TEMPERATURE_BIT_LENGTH = Short.SIZE; // 16-bit signed short
     private static final int GRAVITY_BIT_LENGTH = 15; // unsigned compact float
@@ -22,11 +42,63 @@ public final class PlanetData {
     private short temperature;
     private float gravity;
 
+    private static final Set<Planet> PLANETS = new HashSet<>();
+    private static final Map<ResourceKey<Level>, Planet> LEVEL_TO_PLANET = new HashMap<>();
+    private static final Map<Optional<ResourceKey<Level>>, Planet> ORBIT_TO_PLANET = new HashMap<Optional<ResourceKey<Level>>, Planet>();
+    private static final Set<ResourceKey<Level>> PLANET_LEVELS = new HashSet<>();
+    private static final Set<ResourceKey<Level>> ORBITS_LEVELS = new HashSet<>();
+    private static final Set<ResourceKey<Level>> OXYGEN_LEVELS = new HashSet<>();
+
     public PlanetData(boolean oxygen, short temperature, float gravity) {
+        super(GSON, "planets");
         this.oxygen = oxygen;
         this.temperature = temperature;
         this.gravity = gravity;
     }
+
+    public PlanetData() {
+        super(GSON, "planets");
+    }
+
+    @Override
+    protected void apply(Map<ResourceLocation, JsonElement> objects, ResourceManager resourceManager, ProfilerFiller profiler) {
+        profiler.push("Ad Astra Planet Deserialization");
+        List<Planet> planets = new ArrayList<>();
+
+        for (Map.Entry<ResourceLocation, JsonElement> entry : objects.entrySet()) {
+            JsonObject jsonObject = GsonHelper.convertToJsonObject(entry.getValue(), "planet");
+            Planet newPlanet = Planet.CODEC.parse(JsonOps.INSTANCE, jsonObject).getOrThrow(false, AdAstra.LOGGER::error);
+            planets.removeIf(planet -> planet.dimension().equals(newPlanet.dimension()));
+            planets.add(newPlanet);
+        }
+
+        updatePlanets(planets);
+        profiler.pop();
+    }
+
+    public static void updatePlanets(Collection<Planet> planets) {
+        clear();
+        for (Planet planet : new HashSet<>(planets)) {
+            PLANETS.add(planet);
+            LEVEL_TO_PLANET.put(planet.dimension(), planet);
+            ORBIT_TO_PLANET.put(planet.orbit(), planet);
+            PLANET_LEVELS.add(planet.dimension());
+            ORBITS_LEVELS.add(planet.getOrbitPlanet());
+        }
+    }
+
+    private static void clear() {
+        PLANETS.clear();
+        LEVEL_TO_PLANET.clear();
+        ORBIT_TO_PLANET.clear();
+        ORBITS_LEVELS.clear();
+        OXYGEN_LEVELS.clear();
+    }
+
+    public static Set<Planet> planets() {
+        return PLANETS;
+    }
+
 
     public boolean oxygen() {
         return oxygen;
@@ -109,4 +181,5 @@ public final class PlanetData {
             "temperature=" + temperature + ", " +
             "gravity=" + gravity + ']';
     }
+
 }

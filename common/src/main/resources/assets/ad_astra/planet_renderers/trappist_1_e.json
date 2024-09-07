@@ -1,0 +1,38 @@
+{
+  "custom_clouds": false,
+  "custom_sky": true,
+  "custom_weather": false,
+  "dimension": "ad_astra:trappist_1_e",
+  "has_fog": true,
+  "has_thick_fog": false,
+  "render_in_rain": false,
+  "sky_renderables": [
+    {
+      "back_light_color": -39,
+      "back_light_scale": 27.0,
+      "blend": true,
+      "global_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "movement_type": "TIME_OF_DAY",
+      "scale": 9.0,
+      "texture": "ad_astra:textures/environment/red_sun.png"
+    }
+  ],
+  "star_colors": [
+    {
+      "data": -1,
+      "weight": 1
+    }
+  ],
+  "stars": 1500,
+  "sunrise_angle": 0,
+  "sunrise_color": 14180147
+}

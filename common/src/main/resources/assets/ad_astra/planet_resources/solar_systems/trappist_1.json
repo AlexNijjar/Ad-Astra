@@ -1,0 +1,13 @@
+{
+  "galaxy": "ad_astra:milky_way",
+  "solar_system": "ad_astra:trappist_1",
+  "sun": "ad_astra:textures/environment/red_sun.png",
+  "sun_scale": 15,
+  "button_color": "blue",
+    "ring_color": {
+      "r": 36,
+      "g": 50,
+      "b": 123,
+      "a": 200
+    }
+}

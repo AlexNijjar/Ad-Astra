@@ -20,12 +20,18 @@ public class ModDimensionProvider {
     public static final ResourceKey<LevelStem> VENUS_ORBIT = register("venus_orbit");
     public static final ResourceKey<LevelStem> MERCURY_ORBIT = register("mercury_orbit");
     public static final ResourceKey<LevelStem> GLACIO_ORBIT = register("glacio_orbit");
+    public static final ResourceKey<LevelStem> EOS_ORBIT = register("eos_orbit");
+    public static final ResourceKey<LevelStem> DEIMOS_ORBIT = register("deimos_orbit");
+    public static final ResourceKey<LevelStem> TRAPPIST_1_E_ORBIT = register("trappist_1_e_orbit");
 
     public static final ResourceKey<LevelStem> MOON = register("moon");
     public static final ResourceKey<LevelStem> MARS = register("mars");
     public static final ResourceKey<LevelStem> VENUS = register("venus");
     public static final ResourceKey<LevelStem> MERCURY = register("mercury");
     public static final ResourceKey<LevelStem> GLACIO = register("glacio");
+    public static final ResourceKey<LevelStem> EOS = register("eos");
+    public static final ResourceKey<LevelStem> DEIMOS = register("deimos");
+    public static final ResourceKey<LevelStem> TRAPPIST_1_E = register("trappist_1_e");
 
     private static ResourceKey<LevelStem> register(String name) {
         return ResourceKey.create(Registries.LEVEL_STEM, new ResourceLocation(AdAstra.MOD_ID, name));
@@ -46,6 +52,9 @@ public class ModDimensionProvider {
         space(context, VENUS_ORBIT, ModDimensionTypeProvider.VENUS_ORBIT, dimensionTypes, biomes, noiseSettings);
         space(context, MERCURY_ORBIT, ModDimensionTypeProvider.MERCURY_ORBIT, dimensionTypes, biomes, noiseSettings);
         space(context, GLACIO_ORBIT, ModDimensionTypeProvider.GLACIO_ORBIT, dimensionTypes, biomes, noiseSettings);
+        space(context, EOS_ORBIT, ModDimensionTypeProvider.EOS_ORBIT, dimensionTypes, biomes, noiseSettings);
+        space(context, TRAPPIST_1_E_ORBIT, ModDimensionTypeProvider.TRAPPIST_1_E_ORBIT, dimensionTypes, biomes, noiseSettings);
+        space(context, DEIMOS_ORBIT, ModDimensionTypeProvider.DEIMOS_ORBIT, dimensionTypes, biomes, noiseSettings);
     }
 
     private static void space(BootstapContext<LevelStem> context, ResourceKey<LevelStem> key, ResourceKey<DimensionType> type, HolderGetter<DimensionType> dimensionTypes, HolderGetter<Biome> biomes, HolderGetter<NoiseGeneratorSettings> noiseSettings) {

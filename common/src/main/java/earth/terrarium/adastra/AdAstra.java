@@ -2,10 +2,8 @@ package earth.terrarium.adastra;
 
 import com.mojang.logging.LogUtils;
 import com.teamresourceful.resourcefulconfig.common.config.Configurator;
-import earth.terrarium.adastra.api.systems.GravityApi;
-import earth.terrarium.adastra.api.systems.OxygenApi;
-import earth.terrarium.adastra.api.systems.PlanetData;
-import earth.terrarium.adastra.api.systems.TemperatureApi;
+import earth.terrarium.adastra.api.planets.Planet;
+import earth.terrarium.adastra.api.systems.*;
 import earth.terrarium.adastra.common.config.AdAstraConfig;
 import earth.terrarium.adastra.common.network.NetworkHandler;
 import earth.terrarium.adastra.common.network.messages.ClientboundSyncLocalPlanetDataPacket;
@@ -29,6 +27,7 @@ public class AdAstra {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public static void init() {
+
         CONFIGURATOR.registerConfig(AdAstraConfig.class);
 
         NetworkHandler.init();
@@ -61,6 +60,7 @@ public class AdAstra {
         CauldronInteraction.WATER.put(ModItems.SPACE_PANTS.get(), CauldronInteraction.DYED_ITEM);
         CauldronInteraction.WATER.put(ModItems.SPACE_BOOTS.get(), CauldronInteraction.DYED_ITEM);
         ModEntityTypes.registerSpawnPlacements();
+
     }
 
     public static void onAddReloadListener(BiConsumer<ResourceLocation, PreparableReloadListener> registry) {
@@ -80,5 +80,9 @@ public class AdAstra {
                 NetworkHandler.CHANNEL.sendToPlayer(new ClientboundSyncLocalPlanetDataPacket(new PlanetData(oxygen, temperature, gravity)), player);
             }
         });
+    }
+
+    public static void onRegisterReloadListeners(BiConsumer<ResourceLocation, PreparableReloadListener> registry) {
+        registry.accept(new ResourceLocation(AdAstra.MOD_ID, "planet_data"), new PlanetData());
     }
 }

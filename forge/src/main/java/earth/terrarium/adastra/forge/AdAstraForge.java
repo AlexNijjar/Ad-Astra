@@ -33,6 +33,7 @@ public class AdAstraForge {
         MinecraftForge.EVENT_BUS.addListener(AdAstraForge::onBlockPlace);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(AdAstraForge::onAttributes);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(AdAstraForge::commonSetup);
+        MinecraftForge.EVENT_BUS.addListener(AdAstraForge::onServerReloadListeners);
         if (FMLEnvironment.dist.isClient()) {
             AdAstraClientForge.init();
         }
@@ -81,4 +82,9 @@ public class AdAstraForge {
             event.setCanceled(true);
         }
     }
+
+    public static void onServerReloadListeners(AddReloadListenerEvent event) {
+        AdAstra.onRegisterReloadListeners((id, listener) -> event.addListener(listener));
+    }
+
 }

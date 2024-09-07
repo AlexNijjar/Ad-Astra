@@ -83,7 +83,7 @@ public record ServerboundConstructSpaceStationPacket(
 
                 // Construct space station structure from structure nbt file
                 StructureTemplate structure = targetLevel.getStructureManager().getOrCreate(recipe.structure());
-                BlockPos stationPos = BlockPos.containing((pos.getMiddleBlockX() - (structure.getSize().getX() / 2.0f)), 100, (pos.getMiddleBlockZ() - (structure.getSize().getZ() / 2.0f)));
+                BlockPos stationPos = BlockPos.containing((pos.getMiddleBlockX() - (structure.getSize().getX() / 2.0f)), AdAstraConfig.atmosphereLeave / 2.0F, (pos.getMiddleBlockZ() - (structure.getSize().getZ() / 2.0f)));
                 targetLevel.getChunkSource().addRegionTicket(TicketType.PORTAL, new ChunkPos(stationPos), 1, stationPos);
                 structure.placeInWorld(targetLevel, stationPos, stationPos, new StructurePlaceSettings(), targetLevel.random, 2);
 
@@ -91,7 +91,7 @@ public record ServerboundConstructSpaceStationPacket(
 
                 LaunchingDimensionHandler.addSpawnLocation(player, serverLevel);
                 BlockPos middleBlockPosition = pos.getMiddleBlockPosition(AdAstraConfig.atmosphereLeave);
-                ModUtils.land(serverPlayer, targetLevel, new Vec3(middleBlockPosition.getX() - 0.5f, middleBlockPosition.getY(), middleBlockPosition.getZ() - 0.5f));
+                ModUtils.land(serverPlayer, targetLevel, new Vec3(middleBlockPosition.getX() - 0.5f, (middleBlockPosition.getY() / 2.0F) + 30.0F, middleBlockPosition.getZ() - 0.5f));
 
                 // Cadmus claiming 3x3 chunks
                 if (CadmusIntegration.cadmusLoaded()) {

@@ -1,0 +1,45 @@
+{
+  "world": "ad_astra:eos",
+  "stars": {
+    "fancy_count": 2000,
+    "fast_count": 2000,
+    "colored_stars": false,
+    "daylight_visible": true
+  },
+  "sunset_color": "vanilla",
+  "dimension_effects": {
+    "type": "simple"
+  },
+  "cloud_effects": "vanilla",
+  "weather_effects": "none",
+  "horizon_angle": 0,
+  "sky_objects": [
+    {
+      "texture": "ad_astra:textures/environment/red_sun.png",
+      "blending": true,
+      "render_type": "dynamic",
+      "scale": 30.0,
+      "rotation": [
+        0.0,
+        -90.0,
+        0.0
+      ]
+    },
+    {
+      "texture": "ad_astra:textures/environment/light.png",
+      "blending": true,
+      "render_type": "static",
+      "scale": 120.0,
+      "color": {
+        "r": 204,
+        "g": 153,
+        "b": 255
+      },
+      "rotation": [
+        60.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

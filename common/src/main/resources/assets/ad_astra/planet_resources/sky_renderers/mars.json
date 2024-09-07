@@ -1,0 +1,110 @@
+{
+  "world": "ad_astra:mars",
+  "stars": {
+    "fancy_count": 4000,
+    "fast_count": 4000,
+    "colored_stars": false,
+    "daylight_visible": false
+  },
+  "sunset_color": "mars",
+  "dimension_effects": {
+    "type": "simple"
+  },
+  "cloud_effects": "none",
+  "weather_effects": "none",
+  "horizon_angle": 0,
+  "sky_objects": [
+    {
+      "texture": "ad_astra:textures/environment/blue_sun.png",
+      "blending": true,
+      "render_type": "dynamic",
+      "scale": 30.0,
+      "rotation": [
+        0.0,
+        -90.0,
+        0.0
+      ]
+    },
+    {
+      "texture": "ad_astra:textures/environment/earth.png",
+      "blending": true,
+      "render_type": "dynamic",
+      "scale": 1.0,
+      "rotation": [
+        -20.0,
+        -40.0,
+        0.0
+      ]
+    },
+    {
+      "texture": "ad_astra:textures/environment/light.png",
+      "blending": true,
+      "render_type": "dynamic",
+      "scale": 2.5,
+      "color": {
+        "r": 128,
+        "g": 191,
+        "b": 255
+      },
+      "rotation": [
+        -20.0,
+        -40.0,
+        0.0
+      ]
+    },
+    {
+      "texture": "ad_astra:textures/environment/phobos.png",
+      "blending": true,
+      "render_type": "dynamic",
+      "scale": 1.5,
+      "rotation": [
+        -10.0,
+        20.0,
+        200.0
+      ]
+    },
+    {
+      "texture": "ad_astra:textures/environment/light.png",
+      "blending": true,
+      "render_type": "dynamic",
+      "scale": 2.0,
+      "color": {
+        "r": 255,
+        "g": 217,
+        "b": 179
+      },
+      "rotation": [
+        -10.0,
+        20.0,
+        200.0
+      ]
+    },
+    {
+      "texture": "ad_astra:textures/environment/deimos.png",
+      "blending": true,
+      "render_type": "dynamic",
+      "scale": 2.0,
+      "rotation": [
+        10.0,
+        -5.0,
+        165.0
+      ]
+    },
+    {
+      "texture": "ad_astra:textures/environment/light.png",
+      "blending": true,
+      "render_type": "dynamic",
+      "scale": 2.0,
+      "color": {
+        "r": 255,
+        "g": 255,
+        "b": 204
+      },
+      "rotation": [
+        10.0,
+        -5.0,
+        165.0
+      ]
+    }
+  ]
+}
