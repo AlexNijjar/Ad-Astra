@@ -1,0 +1,18 @@
+{
+  "name": "Radyo",
+  "icon": "ad_astra:radio",
+  "sortnum": 7,
+  "category": "ad_astra:the_first_launch",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Radyo",
+      "item": "ad_astra:radio",
+      "text": "Başlamadan önce neden biraz melodi dinlemiyorsunuz? Radyo, gerçek internet akışlı radyo istasyonlarını çalacak bir bloktur! Birden fazla türde dinleyebileceğiniz birkaç istasyon var. Buna ek olarak, çevredeki herkes aynı istasyonu duyacaktır. Sonunda, radyoyu, etrafta dolaşmak ve müzik dinlemek için dahili bir radyoya sahip olan keşif aracını yapmak için kullanabileceksiniz."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:radio"
+    }
+  ]
+}

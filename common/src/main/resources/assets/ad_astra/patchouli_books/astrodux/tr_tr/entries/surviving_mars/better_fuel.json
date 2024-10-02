@@ -1,0 +1,28 @@
+{
+  "name": "Daha İyi Yakıt",
+  "icon": "ad_astra:cryo_freezer",
+  "sortnum": 6,
+  "category": "ad_astra:surviving_mars",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Kriyo Dondurucu",
+      "item": "ad_astra:cryo_freezer",
+      "text": "Yakıt elde etmek zordur; okyanusa açılmayı ve petrol fışkırmalarını aramayı gerektirir. Kriyo Dondurucu daha iyi bir yakıt elde etmenin yeni bir yolunu sunuyor: Kriyo Yakıt. Kriyo Yakıt rafine yakıttan çok daha verimlidir ve sadece bir kova ile bir roket fırlatmanıza olanak sağlar."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Soğuk gezegenlerde yeraltında bir cevher olarak bulunan buz parçalarının toplanmasıyla oluşturulur. Buz parçasının daha sonra bir Kriyo Dondurucuya yerleştirilmesi gerekir ve 25 mB Kriyo Yakıta dönüşecektir. Alternatif olarak buz, sert buz ve mavi buzu yakıta dönüştürebilirsiniz. En az iki kova yaptıktan sonra (biri fırlatma, diğeri dönüş yolculuğu için), kovaları roket yakıtı yuvasına yerleştirin."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:cryo_freezer"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Kriyo Yakıt",
+      "item": "ad_astra:cryo_fuel_bucket",
+      "text": "Mükemmel bir yakıt olmasının yanı sıra, kriyo yakıtın başka özellikleri de vardır. Yerleştirildiğinde, lav gibi içindeki her şeye zarar verir. Ayrıca suyu dondurarak sonsuz bir buz kaynağı sağlar."
+    }
+  ]
+}

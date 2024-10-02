@@ -1,0 +1,19 @@
+{
+  "name": "Endüstriyel Lambalar",
+  "icon": "ad_astra:lime_industrial_lamp",
+  "sortnum": 2,
+  "category": "ad_astra:surviving_mars",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Endüstriyel Lambalar",
+      "item": "ad_astra:small_blue_industrial_lamp",
+      "text": "Endüstriyel lambalar 16 rengin tamamında ve küçük ve büyük boyutlarda mevcuttur. Varsayılan olarak, bunların hepsi normal beyaz ışık yayacaktır; ancak $(l:https://modrinth.com/mod/shimmer!)Shimmer$(/l), moduna sahipseniz, her ışık kendi rengini yayacaktır."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:magenta_industrial_lamp",
+      "recipe2": "ad_astra:small_red_industrial_lamp"
+    }
+  ]
+}

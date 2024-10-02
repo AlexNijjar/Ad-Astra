@@ -1,0 +1,24 @@
+{
+  "name": "Çelik Yapımı",
+  "icon": "ad_astra:etrionic_blast_furnace",
+  "sortnum": 2,
+  "category": "ad_astra:the_first_launch",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Etrionik Maden Eritme Ocağı",
+      "item": "ad_astra:etrionic_blast_furnace",
+      "text": "Etrionik Maden Eritme Ocağı, yüksek fırının geliştirilmiş bir versiyonudur. İki modu vardır: ateşleme ve alaşımlama. Ateşleme, maden eritme ocağı gibi çalışır, ancak 4 kat verimlilik için 4 yuvaya sahiptir. Alaşımlama, bir alaşım yapmak için malzemeleri birleştirir."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:etrionic_blast_furnace"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Steel",
+      "item": "ad_astra:steel_ingot",
+      "text": "Steel is made in an etrionic blast furnace by combining iron and coal. This will make 1 steel ingot per iron and coal. Steel is essential for most recipes and is the main material of your first rocket."
+    }
+  ]
+}

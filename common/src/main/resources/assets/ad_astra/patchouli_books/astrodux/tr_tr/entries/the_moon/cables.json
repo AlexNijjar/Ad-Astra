@@ -1,0 +1,32 @@
+{
+  "name": "Kablolar",
+  "icon": "ad_astra:desh_cable",
+  "sortnum": 6,
+  "category": "ad_astra:the_moon",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Kablolar",
+      "item": "ad_astra:desh_cable",
+      "text": "Kablolar uzun menzilli enerji transferine izin verir. İki çeşidi vardır: çelik ve desh - desh, daha yüksek bir aktarım hızına sahiptir. Bir ingiliz anahtarı ile kullanıldığında, kablolar yönlere uzanacak veya ağdaki düğümlerle bağlantıyı kesecek şekilde yapılandırılabilir."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:steel_cable",
+      "recipe2": "ad_astra:desh_cable"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:wrench"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Kablo kanalları",
+      "text": "Kablolar katı bloklar değildir. Bu nedenle, oksijen dağıtıcılarının ve yerçekimi normalleştiricilerinin çalışmasını engelleyen bir yapıyı kapatmazlar. Kablo kanalı, sızıntıları önlerken tam olarak kablolar gibi çalışan tam bir bloktur."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:cable_duct"
+    }
+  ]
+}

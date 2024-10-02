@@ -1,0 +1,19 @@
+{
+  "name": "Yer Çekimi Normalleştirici",
+  "icon": "ad_astra:gravity_normalizer",
+  "sortnum": 3,
+  "category": "ad_astra:the_moon",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Yer Çekimi Normalleştirici",
+      "item": "ad_astra:gravity_normalizer",
+      "text": "Yerçekimi normalleştirici, oksijen dağıtıcısına benzer şekilde kapalı bir alanda yapay yer çekimi oluşturmanıza olanak tanır. Hedef yer çekimini ayarlamak için bir kaydırıcıya sahiptir - 0-G'den 2-G'ye kadar. Yerçekimi normalleştiricileri çalıştırmak için önemli miktarda güç kullanır, bu nedenle yapınızın buna ihtiyacı yoksa bunlardan kaçının."
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Yer Çekimi Normalleştirici Tarifi",
+      "recipe": "ad_astra:gravity_normalizer"
+    }
+  ]
+}

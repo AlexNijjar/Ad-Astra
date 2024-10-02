@@ -1,0 +1,20 @@
+{
+  "name": "Ödüller",
+  "icon": "ad_astra:mars_globe",
+  "sortnum": 0,
+  "category": "ad_astra:surviving_mars",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Küreler",
+      "item": "ad_astra:earth_globe",
+      "text": "Küreler, bir zindanın sonunda ödül olarak bulunan ödül bloklarıdır. Kürelerin pratik bir işlevi yoktur ve bunun yerine bir dekorasyon bloğudur. Sağ tıklanarak döndürülebilirler veya redstone ile güçlendirildiklerinde sonsuza kadar dönebilirler. Şu anda hayatta kalmada yalnızca Ay küresi elde edilebilir."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Uzay Tabloları",
+      "item": "ad_astra:space_painting",
+      "text": "Uzay tabloları zindanlardaki sandıklarda bulunur. Normal tablolar gibi çalışırlar ancak sadece bu moddaki tabloları yerleştirirler. Aranacak 14 parça vardır."
+    }
+  ]
+}

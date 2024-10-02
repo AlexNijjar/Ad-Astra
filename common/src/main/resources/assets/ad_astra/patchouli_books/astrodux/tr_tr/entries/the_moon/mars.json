@@ -1,0 +1,19 @@
+{
+  "name": "Mars",
+  "icon": "ad_astra:/textures/environment/mars.png",
+  "sortnum": 8,
+  "category": "ad_astra:the_moon",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Mars",
+      "text": "Artık Ay'ı keşfettiğinize ve desh ile uğraştığınıza göre, bunu daha da ileri götürmek ve kızıl gezegene gitmek istiyorsunuz. Mars'a seyahat edebilecek ikinci kademe bir roket inşa etmek, birinci kademe roket inşa etmeye benzer, ancak çelik yerine desh malzemeleriyle. Parçaları oluşturun, roketi NASA çalışma tezgahında inşa edin, yakıtını doldurun ve Mars'a gidin!"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Ostrum",
+      "item": "ad_astra:ostrum_ingot",
+      "text": "Ostrum, kızıl gezegende aradığınız bir sonraki malzemedir. Daha güçlü uzay zırhları yapmak, olağanüstü makineler inşa etmek ve aşırı sıcağa dayanabilen bir roket inşa etmek için kullanılır ve sıcak gezegenlere seyahat etmenizi sağlar."
+    }
+  ]
+}

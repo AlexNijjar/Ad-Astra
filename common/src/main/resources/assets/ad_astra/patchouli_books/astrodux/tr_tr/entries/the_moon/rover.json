@@ -1,0 +1,29 @@
+{
+  "name": "Keşif Aracı",
+  "icon": "ad_astra:tier_1_rover",
+  "sortnum": 5,
+  "category": "ad_astra:the_moon",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Keşif Aracı",
+      "item": "ad_astra:tier_1_rover",
+      "text": "Keşif aracı, ayların ve gezegenlerin engebeli arazisinde sürüş yapabilen bir kara aracıdır. Son derece hızlıdır, 16 eşya depolayabilen bir envantere sahiptir ve birden fazla sürücü için iki koltuğu vardır. Ayrıca varlıkların üzerinden geçebilir ve ciddi hasarlar verebilirsiniz. Kullanmak için keşif aracını yakıtla doldurun (shift tuşuna basarak tıklayın ve yakıt kovalarını sol giriş yuvasına yerleştirin)."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "ad_astra:tier_1_rover",
+      "scale": 0.36
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Keşif Aracı Tarifi",
+      "recipe": "ad_astra:tier_1_rover"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Radyo",
+      "text": "Keşif aracında, gerçek internet akışlı radyo istasyonlarını çalmak için yerleşik bir radyo vardır. Keşif aracı üzerindeki radyo ile etkileşime girerek veya ($(k:ad_astra.open_radio)) tuşuna basarak kullanın. Keşif aracında birden fazla oyuncu varsa, aynı radyoyu onlar da duyacaktır."
+    }
+  ]
+}

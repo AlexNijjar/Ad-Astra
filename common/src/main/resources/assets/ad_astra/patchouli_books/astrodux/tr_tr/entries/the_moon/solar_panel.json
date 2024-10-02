@@ -1,0 +1,20 @@
+{
+  "name": "Güneş Paneli",
+  "icon": "ad_astra:solar_panel",
+  "sortnum": 1,
+  "category": "ad_astra:the_moon",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Güneş Paneli",
+      "item": "ad_astra:solar_panel",
+      "text": "Güneş paneli, kömür jeneratörünün geliştirilmiş bir versiyonudur ve kendi kendine yeterken tik başına daha fazla enerji üretir. Enerji üretimi gezegenin güneşe olan uzaklığına ve sise bağlıdır. Bu nedenle güneş panellerini güneşe yakın yerleştirmek daha verimlidir. Güneş panelleri ayrıca yörüngede daha fazla enerji üretir, çünkü ışığı engelleyen bir atmosfer yoktur."
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Güneş Paneli",
+      "text": "Mevcut dünyada ne kadar enerji üretildiğini görmek için GUI'yi kontrol edin.",
+      "recipe": "ad_astra:solar_panel"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Netherit Uzay Kıyafeti",
+  "icon": "ad_astra:netherite_space_helmet",
+  "sortnum": 7,
+  "category": "ad_astra:surviving_mars",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Netherit Uzay Kıyafeti",
+      "item": "ad_astra:netherite_space_helmet",
+      "text": "Netherite uzay kıyafeti, standart uzay kıyafetinin yükseltilmiş bir versiyonudur ve kalıcı ateşe dayanıklılık, daha fazla koruma ve Venüs ve Merkür'de hayatta kalma özelliğine sahiptir. Bu gezegenlere seyahat etmeden önce netherit uzay kıyafeti zırhını üretmelisiniz yoksa yanarak ölürsünüz."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:netherite_space_helmet",
+      "recipe2": "ad_astra:netherite_space_suit"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:netherite_space_pants",
+      "recipe2": "ad_astra:netherite_space_boots"
+    }
+  ]
+}

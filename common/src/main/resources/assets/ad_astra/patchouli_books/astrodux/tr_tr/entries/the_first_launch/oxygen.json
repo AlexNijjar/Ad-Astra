@@ -1,0 +1,34 @@
+{
+  "name": "Oksijen",
+  "icon": "ad_astra:oxygen_loader",
+  "sortnum": 5,
+  "category": "ad_astra:the_first_launch",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Bu noktada roketinizi fırlatabilirsiniz; ancak Ay'da oksijen olmadığı için muhtemelen çok hızlı bir şekilde öleceksiniz. Ay'da hayatta kalabilmek için oksijenli bir uzay giysisine ve bol miktarda oksijen kaynağına ihtiyacınız olacak."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:space_helmet",
+      "recipe2": "ad_astra:space_suit"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:space_pants",
+      "recipe2": "ad_astra:space_boots"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Oksijen",
+      "item": "ad_astra:oxygen_bucket",
+      "text": "Oksijen elde etmek için sudan çıkarılması gerekir. Bunu yapmak için bir oksijen yükleyici gereklidir. Bir tane üretin, ardından sol tanka su koyun ve oksijene dönüşmesini izleyin. Yeterli oksijene sahip olana kadar bu işlemi birçok kez tekrarlamanız gerekir."
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Oksijen Yükleyici",
+      "recipe": "ad_astra:oxygen_loader",
+      "text": "Oksijen daha sonra bir kovada, uzay giysisinde veya bir gaz tankında toplanarak çıkarılabilir. Yeterli oksijene sahip olduktan sonra, ilk roketinizi fırlatmanıza çok az kaldı!"
+    }
+  ]
+}

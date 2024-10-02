@@ -1,0 +1,18 @@
+{
+  "name": "Venüs ve Merkür",
+  "icon": "ad_astra:/textures/environment/venus.png",
+  "sortnum": 8,
+  "category": "ad_astra:surviving_mars",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Kalorit",
+      "item": "ad_astra:calorite_ingot",
+      "text": "Tam bir netherit uzay kıyafeti seti ve üçüncü kademe roketin tüm bileşenlerini yapmak için yeterli Ostrum'a sahip olduğunuzda, Venüs ve Merkür'e seyahat edebilirsiniz. Bu gezegenlere netherit uzay kıyafeti veya ateş direnci olmadan girerseniz çok hızlı öleceğinizi lütfen unutmayın. Aradığınız bir sonraki malzeme Kalorit."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Kalorit, yeni bir güneş sistemine seyahat edebilecek nihai roketin yapımında kullanılıyor."
+    }
+  ]
+}
