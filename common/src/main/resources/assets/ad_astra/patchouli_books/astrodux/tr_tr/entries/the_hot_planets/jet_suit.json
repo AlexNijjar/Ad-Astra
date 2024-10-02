@@ -1,0 +1,28 @@
+{
+  "name": "Jet Kıyafeti",
+  "icon": "ad_astra:jet_suit_helmet",
+  "sortnum": 0,
+  "category": "ad_astra:the_hot_planets",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Jet Kıyafeti",
+      "item": "ad_astra:jet_suit_helmet",
+      "text": "Jet Kıyafeti, Netherit Uzay Kıyafetinin daha fazla koruma, ek oksijen depolama ve uçuş özelliklerine sahip yükseltilmiş bir versiyonudur. Üretimi pahalıdır, ancak yüksek hızlı uçuş sunarak seyahati kolaylaştırır."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "İki uçuş modu vardır: yükseliş ($(k:jump)) ve güçlendirilmiş ($(k:jump) + $(k:sprint)). Yükseliş, giyenin yukarı doğru uçmasını sağlarken, güçlendirilmiş sürekli olarak havai fişeklerle itilen bir elitra'ya benzer. Jet Kıyafeti enerji ile çalışır ve uçmak için şarj edilmesi gerekir. Jet kıyafeti ile sağ tıklayarak bir enerjilendirici ile şarj edilebilir. ($(k:ad_astra.toggle_suit_flight)) düğmesine basarak giysiyi etkinleştirin/devre dışı bırakın."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:jet_suit_helmet",
+      "recipe2": "ad_astra:jet_suit"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:jet_suit_pants",
+      "recipe2": "ad_astra:jet_suit_boots"
+    }
+  ]
+}

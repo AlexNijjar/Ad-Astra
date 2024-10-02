@@ -1,0 +1,16 @@
+{
+  "name": "Fırlatma Hazırlığı",
+  "icon": "ad_astra:tier_1_rocket",
+  "sortnum": 8,
+  "category": "ad_astra:the_first_launch",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(#ff0000)Bu adımları çok dikkatli takip edin! $()Burada bir şeyi bile kaçırmak hayatınızı zorlaştırabilir ya da daha kötüsü Ay'da mahsur kalmanıza neden olabilir!$(br2)Ay'dan dünyaya dönmek için iki temel şeye ihtiyacınız vardır: bir fırlatma rampası ve üç kova yakıt."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Bu eşyaları roketinizin envanterine yerleştirin ve her roket fırlattığınızda bunlara sahip olduğunuzdan emin olun. Son olarak, birden fazla dolu gaz tankı, bol miktarda yiyecek, ruh meşaleleri veya ışık taşı (normal meşaleler yanacaktır), silahlar ve aletler getirmelisiniz. Bunları aldıktan sonra fırlatmaya hazırsınız! Rokete girin ve $(k:jump) tuşuna basın!"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Proxima Centauri",
+  "icon": "ad_astra:/textures/painting/alpha_centauri.png",
+  "sortnum": 1,
+  "category": "ad_astra:the_hot_planets",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Proxima Centauri",
+      "text": "Dördüncü kademe bir roket yapmak için yeterli Kalorit bulduğunuzda, bu güneş sisteminden ayrılıp yeni bir sisteme girebileceksiniz. Proxima Centauri'de gideceğiniz ilk gezegen Glacio'dur. Glacio acımasızca soğuktur; ancak oksijeni vardır, bu da uzay giysisi olmadan orada hayatta kalmanızı sağlar."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Şimdilik Ad Astra ilerleyişinin sonuna geldik. Daha fazla içerik eklendikçe bu rehber kitap genişletilecektir. Ad Astra oynadığınız için teşekkürler!"
+    }
+  ]
+}

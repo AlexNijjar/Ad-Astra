@@ -1,0 +1,18 @@
+{
+  "name": "Enerji Üretimi",
+  "icon": "ad_astra:coal_generator",
+  "sortnum": 0,
+  "category": "ad_astra:the_first_launch",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Kömür Jeneratörü",
+      "item": "ad_astra:coal_generator",
+      "text": "Enerji, Ad Astra'nın temel kaynağıdır. Tüm makinelerde kullanılır ve her şey için gereklidir. Enerji üretmenin birden fazla yolu vardır, en temel yol kömür jeneratörüdür. Enerji üretmek için odun veya kömür gibi yakılabilir kaynaklar kullanır."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:coal_generator"
+    }
+  ]
+}

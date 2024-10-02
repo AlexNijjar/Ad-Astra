@@ -1,0 +1,29 @@
+{
+  "name": "Sürgülü Kapılar",
+  "icon": "ad_astra:ostrum_sliding_door",
+  "sortnum": 3,
+  "category": "ad_astra:surviving_mars",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Sürgülü Kapılar",
+      "item": "ad_astra:airlock",
+      "text": "Sürgülü kapılar büyük 3x3 kapılardır. Kapatıldıklarında oksijen sızdırmazlar, bu da onları hava kilitleri için harika adaylar yapar. Bir ingiliz anahtarı ile shift-sağ tıklanarak kilitlenebilirler. Kilitli kapılar sadece redstone ile açılabilir."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:iron_sliding_door",
+      "recipe2": "ad_astra:steel_sliding_door"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:desh_sliding_door",
+      "recipe2": "ad_astra:ostrum_sliding_door"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:airlock",
+      "recipe2": "ad_astra:reinforced_door"
+    }
+  ]
+}

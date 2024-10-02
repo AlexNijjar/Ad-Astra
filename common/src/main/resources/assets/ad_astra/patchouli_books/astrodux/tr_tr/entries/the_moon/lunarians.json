@@ -1,0 +1,36 @@
+{
+  "name": "Aylılar",
+  "icon": "ad_astra:moon_stone_bricks",
+  "sortnum": 7,
+  "category": "ad_astra:the_moon",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Aylı",
+      "item": "ad_astra:moon_stone_bricks",
+      "text": "Ay boyunca, büyük, yerleşik yeraltı köyleri vardır. Bu köyler, kendilerine Aylı diyen dünya köylülerinin yabancı bir formunu barındırıyor. Dünyadaki benzerlerinin aksine, Aylılar oksijene ihtiyaç duymazlar ve Ay'ın soğuk ortamında hayatta kalabilirler."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "ad_astra:lunarian",
+      "default_rotation": 45
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Aylılar, dünya köylülerinden farklı ticaret eşyalarına sahiptir; gezegene özgü malzemeler, uzay kıyafetleri ve oksijen ekipmanı gibi."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Seyyar Tüccar",
+      "item": "ad_astra:lunarian_wandering_trader_spawn_egg",
+      "text": "Aylı Seyyar Tüccar her ay ve gezegende görünür. Fırlatma rampaları, oksijen, yakıt, ruh meşaleleri ve su da dahil olmak üzere hayatınızı kurtarabilecek roketle ilgili birçok ticarete sahiptirler. Ay ve gezegenlerdeki çeşitli yapılarda yaygın olarak bulunan zümrütleri kabul ederler."
+    },
+    {
+      "type": "patchouli:entity",
+      "name": "Seyyar Tüccar",
+      "entity": "ad_astra:lunarian_wandering_trader",
+      "default_rotation": 45,
+      "scale": 0.8
+    }
+  ]
+}

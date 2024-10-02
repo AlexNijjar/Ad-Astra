@@ -1,0 +1,45 @@
+{
+  "name": "Oksijen Dağıtıcı",
+  "icon": "ad_astra:oxygen_distributor",
+  "sortnum": 2,
+  "category": "ad_astra:the_moon",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Oksijen Dağıtıcı",
+      "item": "ad_astra:oxygen_distributor",
+      "text": "Oksijen dağıtıcı, kapalı bir odada oksijen dağıtarak içerideki yaşamın hayatta kalmasını sağlayan güçlü bir makinedir. Tıpkı tankın içine su yerleştirdiğiniz oksijen yükleyici gibi çalışır, ancak size oksijen vermek yerine oksijen havaya dağıtılır."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Su Pompası",
+      "item": "ad_astra:water_pump",
+      "text": "Su pompası, oksijen dağıtıcısının sonsuza kadar çalışmasını sağlamak için gereklidir. Kullanmak için, aşağıya sonsuz bir su kaynağı yerleştirin, ardından su pompasını su bloklarından birinin üzerine yerleştirin ve ardından oksijen dağıtıcısını yanına yerleştirin. Hem pompaya hem de oksijen dağıtıcısına yeterli güç sağladığınızdan emin olun."
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Dağıtıcı ve Pompa",
+      "recipe": "ad_astra:oxygen_distributor",
+      "recipe2": "ad_astra:water_pump"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Dağıtıcının Kullanımı",
+      "text": "Oksijen dağıtıcısına sonsuz bir su kaynağı, yeterli enerji ve tamamen kapalı bir oda sağladığınızda, bu odaya oksijen dağıtacaktır. Oksijenin dağıtıldığını kontrol etmek için dağıtıcı GUI'sinde \"göster\" seçeneğine tıklayın. Oda vurgulanmışsa, bu oksijenin başarıyla dağıtıldığı anlamına gelir."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Yapınızda oksijenin kaçmasına neden olan bir delik varsa, dağıtıcı GUI bir uyarı verecektir. Gereksiz güç çekişini ve oksijen kullanımını önlemek için deliği yamayın. Bundan sonra oksijen giysinizi çıkarabilir ve hayatta kalabilirsiniz. Her bir oksijen dağıtıcısı 6.000 adede kadar bloğu destekleyebilir, bu da orta büyüklükte bir uzay istasyonu veya üs inşa etmenize olanak tanır. Daha fazlasına ihtiyacınız varsa, daha fazla oksijen dağıtıcısı yerleştirebilirsiniz."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Havalandırma",
+      "text": "Oksijenli yapınızın içinde, bir kapı kapatıldığında oksijenin engellenmemesini sağlamak için uygun havalandırma sağlamalısınız. Bunu yapmak için, duvarlar arasında bir blok boşluk oluşturabilir veya oksijen akışına izin vermek için bir havalandırma bloğu kullanabilirsiniz."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Hızlı basınçsızlaştırma",
+      "text": "Yapınız tamamen kapalı olduğunda ve bir delik oluştuğunda, yapınız hızla basınçsız hale gelecektir. Bu feci bir olay olabilir. İçerideki tüm varlıklar şiddetli bir şekilde delikten dışarı çekilecek ve uzay kıyafeti olmadan ölecektir. Oksijen dağıtıcısı da oksijeni ve gücü hızla tüketecektir. Delikleri mümkün olan en kısa sürede yamalayarak ve kazara delik açılmasını önleyerek bundan kaçının."
+    }
+  ]
+}

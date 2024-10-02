@@ -1,0 +1,18 @@
+{
+  "name": "Algılama",
+  "icon": "ad_astra:oxygen_sensor",
+  "sortnum": 7,
+  "category": "ad_astra:surviving_mars",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Oksijen Sensörü",
+      "item": "ad_astra:oxygen_sensor",
+      "text": "Oksijen sensörü, oksijen algıladığında redstone sinyali yayan bir bloktur. Sinyali tersine çevirmek için shift-sağ tıklayabilirsiniz. Adına rağmen, bir ingiliz anahtarıyla sağ tıklayarak algılama türünü de değiştirebilirsiniz. Oksijen, güvenli sıcaklık ve normal yerçekimi algılama seçeneklerine sahiptir."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:oxygen_sensor"
+    }
+  ]
+}

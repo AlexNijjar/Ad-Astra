@@ -1,0 +1,38 @@
+{
+    "name": "Uzay İstasyonu",
+    "icon": "ad_astra:/textures/gui/sprites/space_station.png",
+    "sortnum": 0,
+    "category": "ad_astra:the_moon",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "Uzay İstasyonu",
+            "text": "Bir uzay istasyonu, gerekli malzemelere sahip olmanız koşuluyla gezegen ekranında oluşturulan önceden inşa edilmiş bir yapıdır. Uzay istasyonları her zaman bir ayın veya gezegenin yörüngesinde bulunur ve bu yörünge boyutuna blok yerleştirme olanağı sağlar."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Uzay İstasyonu",
+            "text": "Uzay istasyonları, bir ay/gezegen üzerinde hayallerinizdeki üssü inşa etmenize olanak tanıyacak şekilde genişletilmek üzere tasarlanmıştır. Tüm uzay istasyonlarınız gezegen ekranında bulunur. Diğer oyuncular sizinkiyle aynı alanda yeni uzay istasyonları kuramaz, bu nedenle yapınız güvende olur."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Uzayda Hareket Etmek",
+            "text": "Uzaydaki fizik dünyadakinden çok farklıdır. Yerçekimsiz ortamda, yerçekiminden veya sürtünmeden etkilenmeden havada süzülürsünüz. Bu da hareket etmenizi zorlaştırabilir. Size yardımcı olabilecek bir araç zip tabancasıdır. Bu, oksijeni alır ve sizi ileri itmek için hızla tüketir. Bu, uzayda hareket etmenizi sağlar. Hızınızı kontrol etmeye dikkat edin. Sürtünme olmadığı için uçabilir ve kaybolabilirsiniz."
+        },
+        {
+            "type": "patchouli:crafting",
+            "title": "Zip Tabancası",
+            "recipe": "ad_astra:zip_gun"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Cadmus",
+            "text": "Eğer $(l:https://modrinth.com/mod/cadmus)Cadmus$(/l) yüklüyse, uzay istasyonunuzdaki 3x3'lük yığınlar talep edilecektir. Buna ek olarak, oyuncular talep ettiğiniz yığınların hiçbirinde yeni uzay istasyonları oluşturamayacaklar."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Argonauts",
+            "text": "Eğer $(l:https://modrinth.com/mod/argonauts)Argonauts$(/l) yüklüyse, grubunuzdaki veya birliğinizdeki diğer oyuncular sizin uzay istasyonunuza inebilecek ve siz de onlarınkine inebileceksiniz."
+        }
+    ]
+}

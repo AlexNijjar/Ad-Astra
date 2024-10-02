@@ -1,0 +1,18 @@
+{
+  "name": "Bayraklar",
+  "icon": "ad_astra:blue_flag",
+  "sortnum": 1,
+  "category": "ad_astra:surviving_mars",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Bayraklar",
+      "item": "ad_astra:lime_flag",
+      "text": "Bayraklar toplam 16 rengi bulunan dekoratif bloklardır. Varsayılan olarak, yerleştirildiklerinde bayrak sahibinin yüzünü görüntülerler. Sağ tıklayıp GUI'ye URL'yi girerek bir URL'den özel bir görüntü gösterecek şekilde yapılandırılabilirler. Bu, internet görüntüsünü bayrak üzerinde gösterecektir."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:black_flag"
+    }
+  ]
+}

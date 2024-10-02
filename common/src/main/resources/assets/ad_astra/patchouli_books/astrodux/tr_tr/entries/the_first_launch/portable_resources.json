@@ -1,0 +1,29 @@
+{
+  "name": "Taşınabilir Kaynaklar",
+  "icon": "ad_astra:gas_tank",
+  "sortnum": 6,
+  "category": "ad_astra:the_first_launch",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Gaz Tankları",
+      "item": "ad_astra:gas_tank",
+      "text": "Oksijen tüpleri, oksijeni kullanışlı ve taşınabilir bir biçimde depolamanızı sağlar. Adına rağmen, herhangi bir sıvıyı depolayabilirler. Sağ tıklamaya basılı tuttuğunuzda oksijen envanterinizdeki eşyalara dağıtılır, zırhlara doğru bir eğilimle."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:gas_tank",
+      "recipe2": "ad_astra:large_gas_tank"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Etrionik Kapasitör",
+      "item": "ad_astra:etrionic_capacitor",
+      "text": "Etrionik Kapasitör, taşınabilir bir biçimde enerji depolamak için pil benzeri bir öğedir. Makinelere güç sağlamak için makinelerin enerji yuvasına yerleştirilebilir ve gaz tankları gibi sağ tıklamaya basılı tutarak envanterinize dağıtılabilir. İki moda sahiptir: Ardışık ve Sırayla. Ardışık, enerjiyi teker teker dağıtırken, Sırayla enerjiyi eşit olarak dağıtır. Mod, eğilip sağ tıklanarak değiştirilebilir."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:etrionic_capacitor"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Yakıt",
+  "icon": "ad_astra:fuel_bucket",
+  "sortnum": 4,
+  "category": "ad_astra:the_first_launch",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Roketinizi yerleştirdikten sonra bile henüz uçamayacaksınız. Uçmak için roketi yakıtla doldurmanız gerekecek."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Yakıt Temini",
+      "item": "ad_astra:oil_bucket",
+      "text": "Okyanus yüzeyinden fışkıran büyük miktarlarda petrol bulunur. Toplayabildiğiniz kadar petrol toplayın, çünkü petrol yenilenemez ve her roket fırlatışı için çok fazla petrole ihtiyacınız var."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Yakıt Temini",
+      "item": "ad_astra:fuel_bucket",
+      "text": "Yeterli miktarda petrol topladıktan sonra (fırlatma ve geri dönüş için en az altı kova), petrolü rafine ederek yakıta dönüştürmeniz gerekecektir. Bunu yapmak için bir yakıt rafinerisi üretmeniz gerekecek. Güç verin, ardından petrolü soldaki yuvaya yerleştirin ve yakıta dönüştürülecektir."
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Yakıt Rafinerisi",
+      "recipe": "ad_astra:fuel_refinery",
+      "text": "Envanterini açmak için rokete Shift tuşuyla tıklayın, ardından giriş yuvasına üç kova yakıt yerleştirin. Dönüş yolculuğu için diğer üç kovayı roketin envanterine yerleştirin."
+    }
+  ]
+}

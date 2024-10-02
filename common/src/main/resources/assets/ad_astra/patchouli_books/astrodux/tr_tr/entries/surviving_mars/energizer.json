@@ -1,0 +1,18 @@
+{
+  "name": "Enerjilendirici",
+  "icon": "ad_astra:energizer",
+  "sortnum": 5,
+  "category": "ad_astra:surviving_mars",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Enerjilendirici",
+      "item": "ad_astra:energizer",
+      "text": "Enerjilendirici, eşyalara güç verebilen ve büyük miktarlarda enerji depolayabilen bir makinedir. Bir eşyayı şarj etmek için, enerjilendiriciye güç verin ve ardından o eşya ile enerjilendiriciye sağ tıklayın. 2 milyon enerji depolayarak makineleri çok uzun süre şarj edebilmesini sağlar. Ayrıca kırıldığında da enerjisini korur."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:energizer"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Ay",
+  "icon": "ad_astra:/textures/environment/moon.png",
+  "sortnum": 9,
+  "category": "ad_astra:the_first_launch",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Ay",
+      "item": "ad_astra:desh_ingot",
+      "text": "Aya ulaştığınız için tebrikler! Ay, göz alabildiğine gri ve ölü, çorak bir arazidir; ancak Ad Astra'daki bir sonraki ana kaynağı bulacağınız yer yeraltıdır - Desh! Desh gelişmiş makineler, uzay istasyonları ve ikinci kademe roket yapımında kullanılır."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Çevre",
+      "text": "Ay'ın ortamı Dünya'dan çok farklıdır. Ay'da oksijen bulunmadığından ve dondurucu olduğundan, su yerleştirmeye çalışmak suyu donduracak ve meşale gibi yanan bloklar kırılacaktır. Herhangi bir bitki yaşamı ve mahsul de çok hızlı bir şekilde ölecektir. Bu etkilerle mücadele etmek için, daha sonra ele alacağımız bir oksijen dağıtıcısı inşa edebilirsiniz."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Eve Dönüş",
+      "text": "Dünyaya geri dönmek için iniş aracınızı açın (shift + sağ tık) ve roketi, yakıtı ve fırlatma rampasını toplayın. İniş aracını çıkarmak için yumruklayın. Fırlatma rampasını kurun, roketi yerleştirin ve yakıtla doldurun. $(k:jump) tuşuna basın ve dünyaya geri uçun."
+    }
+  ]
+}

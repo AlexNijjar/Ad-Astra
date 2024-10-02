@@ -1,0 +1,19 @@
+{
+  "name": "Ti-69",
+  "icon": "ad_astra:ti_69",
+  "sortnum": 4,
+  "category": "ad_astra:the_moon",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Ti-69",
+      "item": "ad_astra:ti_69",
+      "text": "Ti-69, yerel oksijen, sıcaklık ve yer çekimini gösteren bir mobil cihazdır. Bölgenin güvenli olup olmadığını kontrol etmek için kullanın."
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Ti-69 Tarifi",
+      "recipe": "ad_astra:ti_69"
+    }
+  ]
+}

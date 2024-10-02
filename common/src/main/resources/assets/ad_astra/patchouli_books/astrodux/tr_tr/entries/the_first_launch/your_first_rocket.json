@@ -1,0 +1,42 @@
+{
+  "name": "İlk Roketin",
+  "icon": "ad_astra:nasa_workbench",
+  "sortnum": 3,
+  "category": "ad_astra:the_first_launch",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "NASA Çalışma Tezgahı",
+      "item": "ad_astra:nasa_workbench",
+      "text": "Bir roket inşa etmek için önce tüm parçaları toplamalısınız: koni, levhalar, kanatçıklar, tanklar ve motor. Daha sonra roketi, sadece roketler için özel olarak tasarlanmış bir çalışma tezgahı olan NASA çalışma tezgahında yapabilirsiniz."
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "NASA Çalışma Tezgahı",
+      "recipe": "ad_astra:nasa_workbench"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "pattern": [
+          [
+            "   ",
+            " 0 ",
+            "   "
+          ]
+        ],
+        "mapping": {
+          "0": "ad_astra:launch_pad"
+        },
+        "symmetrical": true
+      },
+      "text": "Yeni oluşturduğunuz roketi yerleştirmek için bir fırlatma rampası inşa etmelisiniz."
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Fırlatma Rampası",
+      "recipe": "ad_astra:launch_pad",
+      "text": "Fırlatma rampası inşa edildikten sonra roketi merkeze yerleştirin. İsterseniz fırlatma rampasının herhangi bir parçasına güç vererek yakıt doldurulduktan sonra roketi otomatik olarak fırlatabilirsiniz."
+    }
+  ]
+}

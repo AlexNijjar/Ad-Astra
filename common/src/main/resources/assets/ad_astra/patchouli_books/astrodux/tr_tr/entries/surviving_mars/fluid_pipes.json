@@ -1,0 +1,29 @@
+{
+  "name": "Sıvı Boruları",
+  "icon": "ad_astra:ostrum_fluid_pipe",
+  "sortnum": 4,
+  "category": "ad_astra:surviving_mars",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Sıvı Boruları",
+      "item": "ad_astra:ostrum_fluid_pipe",
+      "text": "Sıvı boruları kablolara benzer, ancak enerji aktarımı yerine sıvı aktarımı vardır. Bunları kullanmak için birkaç sıvı borusu ve bir ingiliz anahtarı üretin. Ardından, borunun modları arasında geçiş yapmak için anahtarla borulardan birine sağ tıklayın: 'hiçbiri', 'normal', 'yerleştir' ve 'çıkart'."
+    },
+    {
+      "type": "patchouli:crafting",
+      "text": "'Yerleştir' ayarlı borular şebekeden sıvı alırken 'çıkart' ayarlı borular şebekeye sıvı pompalayacaktır.",
+      "recipe": "ad_astra:desh_fluid_pipe"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:ostrum_fluid_pipe",
+      "recipe2": "ad_astra:wrench"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ad_astra:fluid_pipe_duct",
+      "text": "Kablolar gibi, sıvı boruları da sıvıları kapalı yapıların içine ve dışına güvenli bir şekilde aktarmak için bir kanal bloğuna sahiptir."
+    }
+  ]
+}
