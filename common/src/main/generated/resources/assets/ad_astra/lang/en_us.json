@@ -530,7 +530,7 @@
   "info.ad_astra.rocket": "A rocket used for interplanetary travel. Must be placed on a launch pad. Shift-right-click to access its fuel and inventory.",
   "info.ad_astra.rover": "An all-terrain vehicle. Shift-right-click to access its inventory. Click on the screen to access the rover's radio. This radio can play real radio stations.",
   "info.ad_astra.sliding_door": "A large 3x3 door. Shift-right-click with a wrench to lock it. Locked doors can only be opened with redstone.",
-  "info.ad_astra.solar_panel": "Generates energy from the sun during the dat. Note that the energy generated is dependent on the planet.",
+  "info.ad_astra.solar_panel": "Generates energy from the sun during the day. Note that the energy generated is dependent on the planet.",
   "info.ad_astra.space_suit": "Supplies the wearer with oxygen and protects them from the extreme-cold of space.",
   "info.ad_astra.ti_69": "Displays local oxygen, temperature, and gravity information.",
   "info.ad_astra.vent": "Allows oxygen to flow through.",
