@@ -211,7 +211,7 @@ public class ModLangProvider extends LanguageProvider {
         add(ConstantComponents.NASA_WORKBENCH_INFO, "Used to craft rockets.");
         add(ConstantComponents.FUEL_REFINERY_INFO, "Refines fuel from oil.");
         add(ConstantComponents.OXYGEN_LOADER_INFO, "Converts water into oxygen. Use it to fill up space suits and gas tanks.");
-        add(ConstantComponents.SOLAR_PANEL_INFO, "Generates energy from the sun during the dat. Note that the energy generated is dependent on the planet.");
+        add(ConstantComponents.SOLAR_PANEL_INFO, "Generates energy from the sun during the day. Note that the energy generated is dependent on the planet.");
         add(ConstantComponents.WATER_PUMP_INFO, "Pumps water. Ensure a water source is below the pump for it to function.");
         add(ConstantComponents.OXYGEN_DISTRIBUTOR_INFO, "Distributes oxygen and regulates the temperature. Use it to create livable environments. Should be used in a completely sealed structure.");
         add(ConstantComponents.GRAVITY_NORMALIZER_INFO, "Allows you to control gravity in the local area. Should be used in a completely sealed structure.");
