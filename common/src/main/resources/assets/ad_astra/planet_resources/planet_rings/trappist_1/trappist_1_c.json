@@ -1,0 +1,8 @@
+{
+  "galaxy": "ad_astra:milky_way",
+  "solar_system": "ad_astra:trappist_1",
+  "texture": "ad_astra:textures/environment/trappist_1_c.png",
+  "speed": 2.4,
+  "scale": 9,
+  "radius": 2.0
+}

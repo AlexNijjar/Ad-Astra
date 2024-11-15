@@ -1,0 +1,6 @@
+{
+  "galaxy": "ad_astra:andromeda",
+  "texture": "ad_astra:textures/environment/andromeda.png",
+  "button_color": "purple",
+  "scale": 250
+}

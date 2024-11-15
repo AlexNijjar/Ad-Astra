@@ -1,0 +1,31 @@
+{
+  "type": "ad_astra:space_station_recipe",
+  "dimension": "ad_astra:trappist_1_e_orbit",
+  "ingredients": [
+    {
+      "count": 32,
+      "ingredient": {
+        "tag": "ad_astra:steel_plates"
+      }
+    },
+    {
+      "count": 32,
+      "ingredient": {
+        "tag": "ad_astra:desh_ingots"
+      }
+    },
+    {
+      "count": 32,
+      "ingredient": {
+        "tag": "ad_astra:ostrum_plates"
+      }
+    },
+    {
+      "count": 32,
+      "ingredient": {
+        "tag": "ad_astra:calorite_plates"
+      }
+    }
+  ],
+  "structure": "ad_astra:space_station"
+}

@@ -1,0 +1,8 @@
+{
+  "galaxy": "ad_astra:milky_way",
+  "solar_system": "ad_astra:solar_system",
+  "texture": "ad_astra:textures/environment/mars.png",
+  "speed": 687,
+  "scale": 5,
+  "radius": 4.0
+}

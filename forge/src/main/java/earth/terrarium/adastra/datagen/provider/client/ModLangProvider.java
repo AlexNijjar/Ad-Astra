@@ -2,13 +2,11 @@ package earth.terrarium.adastra.datagen.provider.client;
 
 import com.teamresourceful.resourcefullib.common.registry.RegistryEntry;
 import earth.terrarium.adastra.AdAstra;
-import earth.terrarium.adastra.api.planets.Planet;
 import earth.terrarium.adastra.common.constants.ConstantComponents;
 import earth.terrarium.adastra.common.registry.ModBlocks;
 import earth.terrarium.adastra.common.registry.ModEntityTypes;
 import earth.terrarium.adastra.common.registry.ModFluids;
 import earth.terrarium.adastra.common.registry.ModItems;
-import earth.terrarium.adastra.datagen.provider.server.registry.ModBiomeDataProvider;
 import earth.terrarium.botarium.common.registry.fluid.BotariumFlowingFluid;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
@@ -210,7 +208,7 @@ public class ModLangProvider extends LanguageProvider {
         add(ConstantComponents.NASA_WORKBENCH_INFO, "Used to craft rockets.");
         add(ConstantComponents.FUEL_REFINERY_INFO, "Refines fuel from oil.");
         add(ConstantComponents.OXYGEN_LOADER_INFO, "Converts water into oxygen. Use it to fill up space suits and gas tanks.");
-        add(ConstantComponents.SOLAR_PANEL_INFO, "Generates energy from the sun during the dat. Note that the energy generated is dependent on the planet.");
+        add(ConstantComponents.SOLAR_PANEL_INFO, "Generates energy from the sun during the day. Note that the energy generated is dependent on the planet.");
         add(ConstantComponents.WATER_PUMP_INFO, "Pumps water. Ensure a water source is below the pump for it to function.");
         add(ConstantComponents.OXYGEN_DISTRIBUTOR_INFO, "Distributes oxygen and regulates the temperature. Use it to create livable environments. Should be used in a completely sealed structure.");
         add(ConstantComponents.GRAVITY_NORMALIZER_INFO, "Allows you to control gravity in the local area. Should be used in a completely sealed structure.");
@@ -298,15 +296,23 @@ public class ModLangProvider extends LanguageProvider {
 
         add(ConstantComponents.SPACE_STATION_ALREADY_EXISTS, "A space station already exists at this location!");
 
+        add("galaxy.ad_astra.andromeda", "Andromeda Galaxy");
+        add("text.galaxy.ad_astra.andromeda", "Andromeda Galaxy");
+        add("galaxy.ad_astra.milky_way", "Milky Way");
+        add("text.galaxy.ad_astra.milky_way", "Milky Way");
+
         add("solar_system.ad_astra.solar_system", "Solar System");
         add("solar_system.ad_astra.proxima_centauri", "Proxima Centauri");
+        add("solar_system.ad_astra.pytheas", "Pytheas");
+        add("solar_system.ad_astra.trappist_1", "Trappist 1");
 
         add("planet.minecraft.overworld", "Earth");
         add("planet.ad_astra.moon", "Moon");
         add("planet.ad_astra.mars", "Mars");
         add("planet.ad_astra.venus", "Venus");
         add("planet.ad_astra.mercury", "Mercury");
-        add("planet.ad_astra.glacio", "Glacio");
+        add("planet.ad_astra.trappist_1_e", "Trappist 1e");
+        add("planet.ad_astra.eos", "Eos");
 
         add("planet.ad_astra.earth_orbit", "Earth Orbit");
         add("planet.ad_astra.moon_orbit", "Moon Orbit");
@@ -314,30 +320,40 @@ public class ModLangProvider extends LanguageProvider {
         add("planet.ad_astra.venus_orbit", "Venus Orbit");
         add("planet.ad_astra.mercury_orbit", "Mercury Orbit");
         add("planet.ad_astra.glacio_orbit", "Glacio Orbit");
+        add("planet.ad_astra.trappist_1_e_orbit", "Trappist 1e Orbit");
+        add("planet.ad_astra.eos_orbit", "Eos Orbit");
 
-        add("dimension." + Planet.MOON.location().toLanguageKey(), "Moon");
-        add("dimension." + Planet.MARS.location().toLanguageKey(), "Mars");
-        add("dimension." + Planet.VENUS.location().toLanguageKey(), "Venus");
-        add("dimension." + Planet.MERCURY.location().toLanguageKey(), "Mercury");
-        add("dimension." + Planet.GLACIO.location().toLanguageKey(), "Glacio");
+        add("dimension.ad_astra.earth", "Earth");
+        add("dimension.ad_astra.deimos", "Deimos");
+        add("dimension.ad_astra.eos", "Eos");
+        add("dimension.ad_astra.glacio", "Glacio");
+        add("dimension.ad_astra.mars", "Mars");
+        add("dimension.ad_astra.mercury", "Mercury");
+        add("dimension.ad_astra.moon", "Moon");
+        add("dimension.ad_astra.trappist_1_e", "Trappist 1e");
+        add("dimension.ad_astra.venus", "Venus");
 
-        add("dimension." + Planet.EARTH_ORBIT.location().toLanguageKey(), "Earth Orbit");
-        add("dimension." + Planet.MOON_ORBIT.location().toLanguageKey(), "Moon Orbit");
-        add("dimension." + Planet.MARS_ORBIT.location().toLanguageKey(), "Mars Orbit");
-        add("dimension." + Planet.VENUS_ORBIT.location().toLanguageKey(), "Venus Orbit");
-        add("dimension." + Planet.MERCURY_ORBIT.location().toLanguageKey(), "Mercury Orbit");
-        add("dimension." + Planet.GLACIO_ORBIT.location().toLanguageKey(), "Glacio Orbit");
+        add("dimension.ad_astra.earth_orbit", "Earth Orbit");
+        add("dimension.ad_astra.deimos_orbit", "Deimos Orbit");
+        add("dimension.ad_astra.eos_orbit", "Eos Orbit");
+        add("dimension.ad_astra.glacio_orbit", "Glacio Orbit");
+        add("dimension.ad_astra.mars_orbit", "Mars Orbit");
+        add("dimension.ad_astra.mercury_orbit", "Mercury Orbit");
+        add("dimension.ad_astra.moon_orbit", "Moon Orbit");
+        add("dimension.ad_astra.trappist_1_e_orbit", "Trappist 1e Orbit");
+        add("dimension.ad_astra.venus_orbit", "Venus Orbit");
 
-        add("biome." + ModBiomeDataProvider.SPACE.location().toLanguageKey(), "Space");
-        add("biome." + ModBiomeDataProvider.LUNAR_WASTELANDS.location().toLanguageKey(), "Lunar Wastelands");
-        add("biome." + ModBiomeDataProvider.MARTIAN_CANYON_CREEK.location().toLanguageKey(), "Martian Canyon Creek");
-        add("biome." + ModBiomeDataProvider.MARTIAN_POLAR_CAPS.location().toLanguageKey(), "Martian Polar Caps");
-        add("biome." + ModBiomeDataProvider.MARTIAN_WASTELANDS.location().toLanguageKey(), "Martian Wastelands");
-        add("biome." + ModBiomeDataProvider.INFERNAL_VENUS_BARRENS.location().toLanguageKey(), "Infernal Venus Barrens");
-        add("biome." + ModBiomeDataProvider.VENUS_WASTELANDS.location().toLanguageKey(), "Venus Wastelands");
-        add("biome." + ModBiomeDataProvider.MERCURY_DELTAS.location().toLanguageKey(), "Mercury Deltas");
-        add("biome." + ModBiomeDataProvider.GLACIO_ICE_PEAKS.location().toLanguageKey(), "Glacio Ice Peaks");
-        add("biome." + ModBiomeDataProvider.GLACIO_SNOWY_BARRENS.location().toLanguageKey(), "Glacio Snowy Barrens");
+        add("biome.ad_astra.orbit", "Space");
+        add("biome.ad_astra.lunar_wastelands", "Lunar Wastelands");
+        add("biome.ad_astra.martian_canyon_creek", "Martian Canyon Creek");
+        add("biome.ad_astra.martian_polar_caps", "Martian Polar Caps");
+        add("biome.ad_astra.martian_wastelands", "Martian Wastelands");
+        add("biome.ad_astra.infernal_venus_barrens", "Infernal Venus Barrens");
+        add("biome.ad_astra.venus_wastelands", "Venus Wastelands");
+        add("biome.ad_astra.mercury_deltas", "Mercury Deltas");
+        add("biome.ad_astra.glacio_ice_peaks", "Glacio Ice Peaks");
+        add("biome.ad_astra.glacio_snowy_barrens", "Glacio Snowy Barrens");
+        add("biome.ad_astra.trappist_1_e_plains", "Trappist 1e Plains");
 
         add("tag.item.ad_astra.globes", "Globes");
         add("tag.item.ad_astra.flags", "Flags");
@@ -485,6 +501,25 @@ public class ModLangProvider extends LanguageProvider {
         add("advancements.ad_astra.interstellar.title", "Interstellar");
         add("advancements.ad_astra.interstellar.description", "Reach a new solar system");
 
+        add("advancements.ad_astra.jet_suit.description", "§bEquip a jet suit, allowing for unimaginable flight capabilities");
+        add("advancements.ad_astra.jet_suit.title", "Now that's an upgrade!");
+        add("advancements.ad_astra.mars_dungeon.description", "§bEnter a Mars dungeon");
+        add("advancements.ad_astra.mars_dungeon.title", "What lies below the dust?");
+        add("advancements.ad_astra.mercury_dungeon.description", "§bEnter a Mercury dungeon");
+        add("advancements.ad_astra.mercury_dungeon.title", "Back to the Future");
+        add("advancements.ad_astra.moon_dungeon.description", "§bEnter a Moon dungeon");
+        add("advancements.ad_astra.moon_dungeon.title", "Secrets Beneath");
+        add("advancements.ad_astra.netherite_space_suit.description", "§bEquip a netherite space suit, allowing you to survive the most dangerous conditions.");
+        add("advancements.ad_astra.netherite_space_suit.title", "Beat the Heat");
+        add("advancements.ad_astra.rocket_destroyed.description", "§bLaunch a rocket with no passenger, causing it to explode in the sky.");
+        add("advancements.ad_astra..rocket_destroyed.title", "§bChasing Voyager 1.... or not...");
+        add("advancements.ad_astra.space_suit.description", "§bEquip your first space suit");
+        add("advancements.ad_astra.space_suit.title", "Astronaut");
+        add("advancements.ad_astra.venus_dungeon.description", "§bEnter a Venus dungeon");
+        add("advancements.ad_astra.venus_dungeon.title", "Hellish Treasures");
+
+
+
         add("painting.ad_astra.mercury.author", "Facu");
         add("painting.ad_astra.mercury.title", "Mercury");
         add("painting.ad_astra.moon.author", "Facu");
@@ -509,6 +544,7 @@ public class ModLangProvider extends LanguageProvider {
         add("painting.ad_astra.saturn.title", "Saturn");
         add("painting.ad_astra.the_milky_way.author", "Facu");
         add("painting.ad_astra.the_milky_way.title", "The Milky Way");
+        add("painting.ad_astra.andromeda.title", "Andromeda Galaxy");
         add("painting.ad_astra.alpha_centauri.author", "Facu");
         add("painting.ad_astra.alpha_centauri.title", "Alpha Centauri");
         add("painting.ad_astra.sun.author", "Facu");

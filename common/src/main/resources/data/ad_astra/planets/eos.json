@@ -1,0 +1,14 @@
+{
+  "button_color": "LIGHT_BLUE",
+  "days_in_year": 687.0,
+  "dimension": "ad_astra:eos",
+  "galaxy": "ad_astra:andromeda",
+  "gravity": 3.72076,
+  "orbit": "ad_astra:eos_orbit",
+  "oxygen": false,
+  "solar_power": 14,
+  "solar_system": "ad_astra:pytheas",
+  "temperature": -65,
+  "tier": 3,
+  "translation": "gui.ad_astra.text.eos"
+}

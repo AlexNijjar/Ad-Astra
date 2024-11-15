@@ -1,0 +1,34 @@
+{
+  "world": "ad_astra:mercury",
+  "stars": {
+    "fancy_count": 13000,
+    "fast_count": 6000,
+    "colored_stars": true,
+    "daylight_visible": true
+  },
+  "sunset_color": "vanilla",
+  "dimension_effects": {
+    "type": "colored_horizon",
+    "color": {
+      "r": 146,
+      "g": 21,
+      "b": 21
+    }
+  },
+  "cloud_effects": "none",
+  "weather_effects": "none",
+  "horizon_angle": 0,
+  "sky_objects": [
+    {
+      "texture": "ad_astra:textures/environment/sun.png",
+      "blending": true,
+      "render_type": "dynamic",
+      "scale": 90.0,
+      "rotation": [
+        0.0,
+        -90.0,
+        0.0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "ad_astra:eos",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "ad_astra:eos",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "minecraft:desert",
+          "parameters": {
+            "temperature": -0.5,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0.175
+          }
+        }
+      ]
+    }
+  }
+}

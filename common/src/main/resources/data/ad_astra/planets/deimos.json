@@ -1,0 +1,15 @@
+{
+  "button_color": "BLUE",
+  "days_in_year": 1.1,
+  "dimension": "ad_astra:deimos",
+  "galaxy": "ad_astra:milky_way",
+  "gravity": 0.003,
+  "orbit": "ad_astra:deimos_orbit",
+  "oxygen": false,
+  "parent_world": "ad_astra:mars",
+  "solar_power": 24,
+  "solar_system": "ad_astra:solar_system",
+  "temperature": -40,
+  "tier": 1,
+  "translation": "gui.ad_astra.text.deimos"
+}

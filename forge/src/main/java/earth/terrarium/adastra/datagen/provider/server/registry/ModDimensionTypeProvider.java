@@ -22,24 +22,33 @@ public class ModDimensionTypeProvider {
     public static final ResourceKey<DimensionType> VENUS_ORBIT = register("venus_orbit");
     public static final ResourceKey<DimensionType> MERCURY_ORBIT = register("mercury_orbit");
     public static final ResourceKey<DimensionType> GLACIO_ORBIT = register("glacio_orbit");
+    public static final ResourceKey<DimensionType> DEIMOS_ORBIT = register("deimos_orbit");
+    public static final ResourceKey<DimensionType> EOS_ORBIT = register("eos_orbit");
+    public static final ResourceKey<DimensionType> TRAPPIST_1_E_ORBIT = register("trappist_1_e_orbit");
 
     public static final ResourceKey<DimensionType> MOON = register("moon");
     public static final ResourceKey<DimensionType> MARS = register("mars");
     public static final ResourceKey<DimensionType> VENUS = register("venus");
     public static final ResourceKey<DimensionType> MERCURY = register("mercury");
     public static final ResourceKey<DimensionType> GLACIO = register("glacio");
+    public static final ResourceKey<DimensionType> DEIMOS = register("deimos");
+    public static final ResourceKey<DimensionType> EOS = register("eos");
+    public static final ResourceKey<DimensionType> TRAPPIST_1_E = register("trappist_1_e");
 
     private static ResourceKey<DimensionType> register(String name) {
         return ResourceKey.create(Registries.DIMENSION_TYPE, new ResourceLocation(AdAstra.MOD_ID, name));
     }
 
     public static void bootstrap(BootstapContext<DimensionType> context) {
-        orbit(context, EARTH_ORBIT, Planet.EARTH_ORBIT.location());
-        orbit(context, MOON_ORBIT, Planet.MOON_ORBIT.location());
-        orbit(context, MARS_ORBIT, Planet.MARS_ORBIT.location());
-        orbit(context, VENUS_ORBIT, Planet.VENUS_ORBIT.location());
-        orbit(context, MERCURY_ORBIT, Planet.MERCURY_ORBIT.location());
-        orbit(context, GLACIO_ORBIT, Planet.GLACIO_ORBIT.location());
+        orbit(context, EARTH_ORBIT, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "earth_orbit")).location());
+        orbit(context, MOON_ORBIT, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "moon_orbit")).location());
+        orbit(context, MARS_ORBIT, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mars_orbit")).location());
+        orbit(context, VENUS_ORBIT, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "venus_orbit")).location());
+        orbit(context, MERCURY_ORBIT, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mercury_orbit")).location());
+        orbit(context, GLACIO_ORBIT, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "glacio_orbit")).location());
+        orbit(context, DEIMOS_ORBIT, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "deimos_orbit")).location());
+        orbit(context, EOS_ORBIT, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "eos_orbit")).location());
+        orbit(context, TRAPPIST_1_E_ORBIT, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "trappist_1_e_orbit")).location());
 
         context.register(
             MOON,
@@ -56,7 +65,30 @@ public class ModDimensionTypeProvider {
                 384,
                 384,
                 BlockTags.INFINIBURN_OVERWORLD,
-                Planet.MOON.location(),
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "moon")).location(),
+                0.0f,
+                createMonsterSettings(
+                    false,
+                    false,
+                    UniformInt.of(0, 7),
+                    0)));
+
+        context.register(
+            DEIMOS,
+            create(
+                OptionalLong.empty(),
+                true,
+                false,
+                false,
+                true,
+                1.0,
+                true,
+                false,
+                -64,
+                384,
+                384,
+                BlockTags.INFINIBURN_OVERWORLD,
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "deimos")).location(),
                 0.0f,
                 createMonsterSettings(
                     false,
@@ -79,7 +111,7 @@ public class ModDimensionTypeProvider {
                 384,
                 384,
                 BlockTags.INFINIBURN_OVERWORLD,
-                Planet.MARS.location(),
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mars")).location(),
                 0.0f,
                 createMonsterSettings(
                     false,
@@ -102,7 +134,7 @@ public class ModDimensionTypeProvider {
                 384,
                 384,
                 BlockTags.INFINIBURN_OVERWORLD,
-                Planet.VENUS.location(),
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "venus")).location(),
                 0.0f,
                 createMonsterSettings(
                     true,
@@ -125,7 +157,7 @@ public class ModDimensionTypeProvider {
                 384,
                 384,
                 BlockTags.INFINIBURN_OVERWORLD,
-                Planet.MERCURY.location(),
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mercury")).location(),
                 0.0f,
                 createMonsterSettings(
                     true,
@@ -148,13 +180,61 @@ public class ModDimensionTypeProvider {
                 384,
                 384,
                 BlockTags.INFINIBURN_OVERWORLD,
-                Planet.GLACIO.location(),
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "glacio")).location(),
                 0.0f,
                 createMonsterSettings(
                     false,
                     false,
                     UniformInt.of(0, 7),
                     0)));
+
+        context.register(
+            EOS,
+            create(
+                OptionalLong.empty(),
+                true,
+                false,
+                false,
+                true,
+                1.0,
+                true,
+                false,
+                -64,
+                384,
+                384,
+                BlockTags.INFINIBURN_OVERWORLD,
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "eos")).location(),
+                0.0f,
+                createMonsterSettings(
+                    false,
+                    false,
+                    UniformInt.of(0, 7),
+                    0)));
+
+        context.register(
+            TRAPPIST_1_E,
+            create(
+                OptionalLong.empty(),
+                true,
+                false,
+                false,
+                true,
+                1.0,
+                true,
+                false,
+                -64,
+                384,
+                384,
+                BlockTags.INFINIBURN_OVERWORLD,
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "trappist_1_e")).location(),
+                0.0f,
+                createMonsterSettings(
+                    false,
+                    false,
+                    UniformInt.of(0, 7),
+                    0)));
+
+
     }
 
     private static void orbit(BootstapContext<DimensionType> context, ResourceKey<DimensionType> key, ResourceLocation dimensionSpecialEffects) {

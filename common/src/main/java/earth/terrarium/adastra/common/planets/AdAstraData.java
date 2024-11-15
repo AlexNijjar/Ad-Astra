@@ -89,6 +89,18 @@ public class AdAstraData extends SimpleJsonResourceReloadListener {
         return PLANETS.values().stream().map(Planet::solarSystem).collect(Collectors.toUnmodifiableSet());
     }
 
+    public static Set<ResourceLocation> galaxies() {
+        return PLANETS.values().stream().map(Planet::galaxy).collect(Collectors.toUnmodifiableSet());
+    }
+
+    public static Set<Float> gravity() {
+        return PLANETS.values().stream().map(Planet::gravity).collect(Collectors.toUnmodifiableSet());
+    }
+
+    public static Set<Boolean> oxygen() {
+        return PLANETS.values().stream().map(Planet::oxygen).collect(Collectors.toUnmodifiableSet());
+    }
+
     public static void setPlanets(Map<ResourceKey<Level>, Planet> planets) {
         PLANETS.clear();
         PLANETS.putAll(planets);

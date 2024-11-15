@@ -1,0 +1,12 @@
+{
+  "type": "ad_astra:trappist_1_e",
+  "forge:use_server_seed": false,
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "ad_astra:trappist_1_e",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "preset": "minecraft:overworld"
+    }
+  }
+}

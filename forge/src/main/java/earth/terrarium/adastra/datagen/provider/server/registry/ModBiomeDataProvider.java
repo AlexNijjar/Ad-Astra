@@ -16,6 +16,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.Music;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.MobType;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
@@ -35,6 +36,7 @@ public class ModBiomeDataProvider {
     public static final ResourceKey<Biome> MERCURY_DELTAS = register("mercury_deltas");
     public static final ResourceKey<Biome> GLACIO_ICE_PEAKS = register("glacio_ice_peaks");
     public static final ResourceKey<Biome> GLACIO_SNOWY_BARRENS = register("glacio_snowy_barrens");
+    public static final ResourceKey<Biome> TRAPPIST_1_E_PLAINS = register("trappist_1_e_plains");
 
     private static ResourceKey<Biome> register(String name) {
         return ResourceKey.create(Registries.BIOME, new ResourceLocation(AdAstra.MOD_ID, name));
@@ -174,6 +176,35 @@ public class ModBiomeDataProvider {
                 .addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntityTypes.GLACIAN_RAM.get(), 12, 2, 4)),
             glacio(placedFeatures, configuredCarvers),
             null));
+
+        context.register(TRAPPIST_1_E_PLAINS, biome(
+            true,
+            0.8f,
+            0.4F,
+            0x049fcc,
+            0x205A0B,
+            new MobSpawnSettings.Builder()
+                .addSpawn(MobCategory.AMBIENT, new MobSpawnSettings.SpawnerData(EntityType.BAT, 10, 8, 8))
+                .addSpawn(MobCategory.AMBIENT, new MobSpawnSettings.SpawnerData(EntityType.CHICKEN, 12, 4, 4))
+                .addSpawn(MobCategory.AMBIENT, new MobSpawnSettings.SpawnerData(EntityType.PIG, 10, 4, 4))
+                .addSpawn(MobCategory.AMBIENT, new MobSpawnSettings.SpawnerData(EntityType.COW, 10, 4, 4))
+                .addSpawn(MobCategory.AMBIENT, new MobSpawnSettings.SpawnerData(EntityType.SHEEP, 10, 4, 4))
+                .addSpawn(MobCategory.AMBIENT, new MobSpawnSettings.SpawnerData(EntityType.HORSE, 10, 4, 4))
+                .addSpawn(MobCategory.AMBIENT, new MobSpawnSettings.SpawnerData(EntityType.DONKEY, 10, 4, 4))
+                .addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SPIDER, 10, 4, 4))
+                .addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ZOMBIE, 10, 4, 4))
+                .addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ZOMBIE_VILLAGER, 10, 4, 4))
+                .addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SKELETON, 10, 4, 4))
+                .addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.CREEPER, 10, 4, 4))
+                .addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SLIME, 10, 4, 4))
+                .addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ENDERMAN, 10, 4, 4))
+                .addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.WITCH, 10, 4, 4))
+                .addSpawn(MobCategory.WATER_AMBIENT, new MobSpawnSettings.SpawnerData(EntityType.GLOW_SQUID, 10, 4, 4))
+                .addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(ModEntityTypes.MARTIAN_RAPTOR.get(), 10, 1, 3))
+                .addMobCharge(ModEntityTypes.MARTIAN_RAPTOR.get(), 0.2, 0.015),
+             trappist_1_e(placedFeatures, configuredCarvers),
+            null));
+
     }
 
     private static BiomeGenerationSettings.Builder moon(HolderGetter<PlacedFeature> placedFeatures, HolderGetter<ConfiguredWorldCarver<?>> configuredCarvers) {
@@ -256,6 +287,23 @@ public class ModBiomeDataProvider {
             .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatureProvider.GLACIO_DEEPSLATE_IRON_ORE)
             .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatureProvider.GLACIO_DEEPSLATE_LAPIS_ORE);
     }
+
+    private static BiomeGenerationSettings.Builder trappist_1_e(HolderGetter<PlacedFeature> placedFeatures, HolderGetter<ConfiguredWorldCarver<?>> configuredCarvers) {
+        return caves(placedFeatures, configuredCarvers)
+            .addFeature(GenerationStep.Decoration.TOP_LAYER_MODIFICATION, MiscOverworldPlacements.FREEZE_TOP_LAYER)
+            .addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, CavePlacements.AMETHYST_GEODE)
+            .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, CavePlacements.GLOW_LICHEN)
+//            .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, (ResourceKey<PlacedFeature>) "minecraft:ore_gold")
+            .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatureProvider.GLACIO_COPPER_ORE)
+            .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatureProvider.GLACIO_ICE_SHARD_ORE)
+            .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatureProvider.GLACIO_IRON_ORE)
+            .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatureProvider.GLACIO_LAPIS_ORE)
+            .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatureProvider.GLACIO_DEEPSLATE_COAL_ORE)
+            .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatureProvider.GLACIO_DEEPSLATE_COPPER_ORE)
+            .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatureProvider.GLACIO_DEEPSLATE_IRON_ORE)
+            .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatureProvider.GLACIO_DEEPSLATE_LAPIS_ORE);
+    }
+
 
     private static BiomeGenerationSettings.Builder glacioIcePeaks(HolderGetter<PlacedFeature> placedFeatures, HolderGetter<ConfiguredWorldCarver<?>> configuredCarvers) {
         return glacio(placedFeatures, configuredCarvers)

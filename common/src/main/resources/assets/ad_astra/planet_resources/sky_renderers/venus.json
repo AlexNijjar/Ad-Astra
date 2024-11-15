@@ -1,0 +1,83 @@
+{
+  "world": "ad_astra:venus",
+  "stars": {
+    "fancy_count": 3000,
+    "fast_count": 3000,
+    "colored_stars": false,
+    "daylight_visible": false
+  },
+  "sunset_color": "vanilla",
+  "dimension_effects": {
+    "type": "foggy_reversed"
+  },
+  "cloud_effects": "venus",
+  "weather_effects": "venus",
+  "horizon_angle": 180,
+  "sky_objects": [
+    {
+      "texture": "ad_astra:textures/environment/red_sun.png",
+      "blending": true,
+      "render_type": "dynamic",
+      "scale": 30.0,
+      "rotation": [
+        0.0,
+        90.0,
+        0.0
+      ]
+    },
+    {
+      "texture": "ad_astra:textures/environment/earth.png",
+      "blending": true,
+      "render_type": "dynamic",
+      "scale": 1.0,
+      "rotation": [
+        10.0,
+        -94.0,
+        192.0
+      ]
+    },
+    {
+      "texture": "ad_astra:textures/environment/light.png",
+      "blending": true,
+      "render_type": "dynamic",
+      "scale": 3.5,
+      "color": {
+        "r": 128,
+        "g": 191,
+        "b": 255
+      },
+      "rotation": [
+        10.0,
+        -94.0,
+        192.0
+      ]
+    },
+    {
+      "texture": "ad_astra:textures/environment/mercury.png",
+      "blending": true,
+      "render_type": "dynamic",
+      "scale": 1.0,
+      "rotation": [
+        10.0,
+        120.0,
+        10.0
+      ]
+    },
+    {
+      "texture": "ad_astra:textures/environment/light.png",
+      "blending": true,
+      "render_type": "dynamic",
+      "scale": 2.5,
+      "color": {
+        "r": 255,
+        "g": 204,
+        "b": 255
+      },
+      "rotation": [
+        10.0,
+        120.0,
+        10.0
+      ]
+    }
+  ]
+}

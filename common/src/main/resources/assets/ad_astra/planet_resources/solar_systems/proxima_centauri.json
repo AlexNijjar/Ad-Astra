@@ -1,0 +1,13 @@
+{
+  "galaxy": "ad_astra:milky_way",
+  "solar_system": "ad_astra:proxima_centauri",
+  "sun": "ad_astra:textures/environment/blue_sun.png",
+  "sun_scale": 18,
+  "button_color": "turquoise",
+  "ring_color": {
+    "r": 0,
+    "g": 128,
+    "b": 128,
+    "a": 200
+  }
+}

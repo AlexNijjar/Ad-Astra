@@ -1,0 +1,8 @@
+{
+  "galaxy": "ad_astra:milky_way",
+  "solar_system": "ad_astra:solar_system",
+  "texture": "ad_astra:textures/environment/jupiter.png",
+  "speed": 4341,
+  "scale": 18,
+  "radius": 5.0
+}

@@ -2,9 +2,11 @@ package earth.terrarium.adastra.datagen.provider.server;
 
 import earth.terrarium.adastra.AdAstra;
 import earth.terrarium.adastra.api.planets.Planet;
+import earth.terrarium.adastra.client.utils.ButtonColor;
 import earth.terrarium.adastra.common.constants.PlanetConstants;
 import earth.terrarium.adastra.datagen.provider.base.ModCodecProvider;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -25,112 +27,219 @@ public class ModPlanetProvider extends ModCodecProvider<Planet> {
 
     @Override
     protected void build(BiConsumer<ResourceLocation, Planet> consumer) {
-        orbit(consumer, Planet.EARTH_ORBIT, PlanetConstants.SPACE_SOLAR_POWER, PlanetConstants.SOLAR_SYSTEM, 1);
-        orbit(consumer, Planet.MOON_ORBIT, PlanetConstants.MOON_ORBIT_SOLAR_POWER, PlanetConstants.SOLAR_SYSTEM, 1);
-        orbit(consumer, Planet.MARS_ORBIT, PlanetConstants.MARS_ORBIT_SOLAR_POWER, PlanetConstants.SOLAR_SYSTEM, 2);
-        orbit(consumer, Planet.VENUS_ORBIT, PlanetConstants.VENUS_ORBIT_SOLAR_POWER, PlanetConstants.SOLAR_SYSTEM, 3);
-        orbit(consumer, Planet.MERCURY_ORBIT, PlanetConstants.MERCURY_ORBIT_SOLAR_POWER, PlanetConstants.SOLAR_SYSTEM, 3);
-        orbit(consumer, Planet.GLACIO_ORBIT, PlanetConstants.GLACIO_ORBIT_SOLAR_POWER, PlanetConstants.PROXIMA_CENTAURI, 4);
+        orbit(consumer, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "earth_orbit")), 32, new ResourceLocation(AdAstra.MOD_ID, "milky_way"), 1, new ResourceLocation(AdAstra.MOD_ID, "solar_system"));
+        orbit(consumer, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "moon_orbit")), 24, new ResourceLocation(AdAstra.MOD_ID, "milky_way"), 1, new ResourceLocation(AdAstra.MOD_ID, "solar_system"));
+        orbit(consumer, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mars_orbit")), 24, new ResourceLocation(AdAstra.MOD_ID, "milky_way"), 2, new ResourceLocation(AdAstra.MOD_ID, "solar_system"));
+        orbit(consumer, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "venus_orbit")), 48, new ResourceLocation(AdAstra.MOD_ID, "milky_way"), 3, new ResourceLocation(AdAstra.MOD_ID, "solar_system"));
+        orbit(consumer, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mercury_orbit")), 72, new ResourceLocation(AdAstra.MOD_ID, "milky_way"), 3, new ResourceLocation(AdAstra.MOD_ID, "solar_system"));
+        orbit(consumer, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "glacio_orbit")),36, new ResourceLocation(AdAstra.MOD_ID, "milky_way"), 4, new ResourceLocation(AdAstra.MOD_ID, "preoxima_centauri"));
+        orbit(consumer, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "eos_orbit")),36,new ResourceLocation(AdAstra.MOD_ID, "andromeda"), 4, new ResourceLocation(AdAstra.MOD_ID, "pytheas"));
+        orbit(consumer, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "trappist_1_e_orbit")),36, new ResourceLocation(AdAstra.MOD_ID, "milky_way"),4, new ResourceLocation(AdAstra.MOD_ID, "trappist_1"));
+        orbit(consumer, ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "deimos_orbit")),36, new ResourceLocation(AdAstra.MOD_ID, "milky_way"), 4, new ResourceLocation(AdAstra.MOD_ID, "solar_system"));
 
         consumer.accept(
             new ResourceLocation(AdAstra.MOD_ID, "earth"),
             new Planet(
+                "gui.ad_astra.text.earth",
+                new ResourceLocation(AdAstra.MOD_ID, "milky_way"),
+                new ResourceLocation(AdAstra.MOD_ID, "solar_system"),
                 Level.OVERWORLD,
-                true,
-                PlanetConstants.EARTH_TEMPERATURE,
-                PlanetConstants.EARTH_GRAVITY,
-                PlanetConstants.EARTH_SOLAR_POWER,
-                PlanetConstants.SOLAR_SYSTEM,
-                Optional.of(Planet.EARTH_ORBIT),
+                Optional.of(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "earth_orbit"))),
+                Optional.empty(),
                 1,
+                9.807F,
+                365,
+                (short) 15,
+                16,
+                true,
+                ButtonColor.GREEN,
                 List.of()
             )
         );
 
         consumer.accept(
             new ResourceLocation(AdAstra.MOD_ID, "moon"),
-            new Planet(Planet.MOON,
-                false,
-                PlanetConstants.MOON_TEMPERATURE,
-                PlanetConstants.MOON_GRAVITY,
-                PlanetConstants.MOON_SOLAR_POWER,
-                PlanetConstants.SOLAR_SYSTEM,
-                Optional.of(Planet.MOON_ORBIT),
+            new Planet(
+                "gui." + AdAstra.MOD_ID.toString() + ".text." + ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "moon")).location().getPath().toString(),
+                new ResourceLocation(AdAstra.MOD_ID, "milky_way"),
+                new ResourceLocation(AdAstra.MOD_ID, "solar_system"),
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "moon")),
+                Optional.of(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "moon_orbit"))),
+                Optional.of(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "earth"))),
                 1,
+                1.622F,
+                27,
+                (short) -173,
+                24,
+                false,
+                ButtonColor.GREY,
                 List.of()
             )
         );
 
         consumer.accept(
             new ResourceLocation(AdAstra.MOD_ID, "mars"),
-            new Planet(Planet.MARS,
-                false,
-                PlanetConstants.MARS_TEMPERATURE,
-                PlanetConstants.MARS_GRAVITY,
-                PlanetConstants.MARS_SOLAR_POWER,
-                PlanetConstants.SOLAR_SYSTEM,
-                Optional.of(Planet.MARS_ORBIT),
+            new Planet(
+                "gui." + AdAstra.MOD_ID.toString() + ".text." + ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mars")).location().getPath().toString(),
+                new ResourceLocation(AdAstra.MOD_ID, "milky_way"),
+                new ResourceLocation(AdAstra.MOD_ID, "solar_system"),
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mars")),
+                Optional.of(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mars_orbit"))),
+                Optional.empty(),
                 2,
+                3.7207F,
+                687,
+                (short) -65,
+                12,
+                false,
+                ButtonColor.RED,
                 List.of()
             )
         );
 
         consumer.accept(
-            new ResourceLocation(AdAstra.MOD_ID, "venus"),
-            new Planet(Planet.VENUS,
+            new ResourceLocation(AdAstra.MOD_ID, "deimos"),
+            new Planet(
+                "gui." + AdAstra.MOD_ID.toString() + ".text." + ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "deimos")).location().getPath().toString(),
+                new ResourceLocation(AdAstra.MOD_ID, "milky_way"),
+                new ResourceLocation(AdAstra.MOD_ID, "solar_system"),
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "deimos")),
+                Optional.of(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "deimos_orbit"))),
+                Optional.of(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mars"))),
+                1,
+                .003F,
+                1.1F,
+                (short) -40.15F,
+                24,
                 false,
-                PlanetConstants.VENUS_TEMPERATURE,
-                PlanetConstants.VENUS_GRAVITY,
-                PlanetConstants.VENUS_SOLAR_POWER,
-                PlanetConstants.SOLAR_SYSTEM,
-                Optional.of(Planet.VENUS_ORBIT),
-                3,
+                ButtonColor.BLUE,
                 List.of()
             )
         );
 
         consumer.accept(
             new ResourceLocation(AdAstra.MOD_ID, "mercury"),
-            new Planet(Planet.MERCURY,
-                false,
-                PlanetConstants.MERCURY_TEMPERATURE,
-                PlanetConstants.MERCURY_GRAVITY,
-                PlanetConstants.MERCURY_SOLAR_POWER,
-                PlanetConstants.SOLAR_SYSTEM,
-                Optional.of(Planet.MERCURY_ORBIT),
+            new Planet(
+                "gui." + AdAstra.MOD_ID.toString() + ".text." + ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mercury")).location().getPath().toString(),
+                new ResourceLocation(AdAstra.MOD_ID, "milky_way"),
+                new ResourceLocation(AdAstra.MOD_ID, "solar_system"),
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mercury")),
+                Optional.of(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mercury_orbit"))),
+                Optional.empty(),
                 3,
+                3.7F,
+                88,
+                (short) 167,
+                64,
+                false,
+                ButtonColor.RED,
+                List.of()
+            )
+        );
+
+        consumer.accept(
+            new ResourceLocation(AdAstra.MOD_ID, "venus"),
+            new Planet(
+                "gui." + AdAstra.MOD_ID.toString() + ".text." + ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "venus")).location().getPath().toString(),
+                new ResourceLocation(AdAstra.MOD_ID, "milky_way"),
+                new ResourceLocation(AdAstra.MOD_ID, "solar_system"),
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "venus")),
+                Optional.of(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "venus_orbit"))),
+                Optional.empty(),
+                3,
+                8.87F,
+                225,
+                (short) 464,
+                8,
+                false,
+                ButtonColor.ORANGE,
                 List.of()
             )
         );
 
         consumer.accept(
             new ResourceLocation(AdAstra.MOD_ID, "glacio"),
-            new Planet(Planet.GLACIO,
-                true,
-                PlanetConstants.GLACIO_TEMPERATURE,
-                PlanetConstants.GLACIO_GRAVITY,
-                PlanetConstants.GLACIO_SOLAR_POWER,
-                PlanetConstants.PROXIMA_CENTAURI,
-                Optional.of(Planet.GLACIO_ORBIT),
+            new Planet(
+                "gui." + AdAstra.MOD_ID.toString() + ".text." + ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "glacio")).location().getPath().toString(),
+                new ResourceLocation(AdAstra.MOD_ID, "milky_way"),
+                new ResourceLocation(AdAstra.MOD_ID, "proxima_centauri"),
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "glacio")),
+                Optional.of(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "glacio_orbit"))),
+                Optional.empty(),
                 4,
+                3.721F,
+                365,
+                (short) -20,
+                14,
+                false,
+                ButtonColor.LIGHT_BLUE,
                 List.of()
             )
         );
+
+        consumer.accept(
+            new ResourceLocation(AdAstra.MOD_ID, "trappist_1_e"),
+            new Planet(
+                "gui." + AdAstra.MOD_ID.toString() + ".text." + ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "trappist_1_e")).location().getPath().toString(),
+                new ResourceLocation(AdAstra.MOD_ID, "milky_way"),
+                new ResourceLocation(AdAstra.MOD_ID, "trappist_1"),
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "trappist_1_e")),
+                Optional.of(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "trappist_1_e_orbit"))),
+                Optional.empty(),
+                4,
+                9.1205F,
+                6,
+                (short) 15,
+                14,
+                true,
+                ButtonColor.GREEN,
+                List.of()
+            )
+        );
+
+        consumer.accept(
+            new ResourceLocation(AdAstra.MOD_ID, "eos"),
+            new Planet(
+                "gui." + AdAstra.MOD_ID.toString() + ".text." + ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "eos")).location().getPath().toString(),
+                new ResourceLocation(AdAstra.MOD_ID, "andromeda"),
+                new ResourceLocation(AdAstra.MOD_ID, "pytheas"),
+                ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "eos")),
+                Optional.of(ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "eos_orbit"))),
+                Optional.empty(),
+                3,
+                3.72076F,
+                687,
+                (short) -65,
+                14,
+                false,
+                ButtonColor.LIGHT_BLUE,
+                List.of()
+            )
+        );
+
     }
 
-    private static void orbit(BiConsumer<ResourceLocation, Planet> consumer, ResourceKey<Level> planet, int solarPower, ResourceLocation galaxy, int tier) {
+    private static void orbit(BiConsumer<ResourceLocation, Planet> consumer, ResourceKey<Level> planet, int solarPower, ResourceLocation galaxy, int tier, ResourceLocation solarSystem) {
         consumer.accept(
             planet.location(),
-            new Planet(planet,
-                false,
-                PlanetConstants.SPACE_TEMPERATURE,
-                PlanetConstants.SPACE_GRAVITY,
-                solarPower,
+            new Planet(
+                planet.location().toString(),
                 galaxy,
-                Optional.empty(), tier,
+                solarSystem,
+                planet,
+                Optional.empty(),
+                Optional.empty(),
+                tier,
+                0.0F,
+                0,
+                (short) -270,
+                solarPower,
+                false,
+                ButtonColor.BLACK,
                 List.of()
             )
         );
+
     }
 
     @Override

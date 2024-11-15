@@ -42,6 +42,19 @@ public class AdAstraFabric {
             }
             return InteractionResult.PASS;
         });
+
+        AdAstra.onRegisterReloadListeners((id, listener) -> ResourceManagerHelper.get(PackType.SERVER_DATA).registerReloadListener(new IdentifiableResourceReloadListener() {
+            @Override
+            public ResourceLocation getFabricId() {
+                return id;
+            }
+
+            @Override
+            public CompletableFuture<Void> reload(PreparationBarrier synchronizer, ResourceManager manager, ProfilerFiller prepareProfiler, ProfilerFiller applyProfiler, Executor prepareExecutor, Executor applyExecutor) {
+                return listener.reload(synchronizer, manager, prepareProfiler, applyProfiler, prepareExecutor, applyExecutor);
+            }
+        }));
+
     }
 
     public static void onAddReloadListener() {

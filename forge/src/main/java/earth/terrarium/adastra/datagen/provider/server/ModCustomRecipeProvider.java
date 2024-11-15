@@ -11,6 +11,7 @@ import earth.terrarium.adastra.datagen.builder.*;
 import earth.terrarium.botarium.common.fluid.base.FluidHolder;
 import earth.terrarium.botarium.common.fluid.utils.FluidIngredient;
 import earth.terrarium.botarium.common.fluid.utils.QuantifiedFluidIngredient;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -166,7 +167,7 @@ public abstract class ModCustomRecipeProvider extends RecipeProvider {
                 IngredientHolder.of(Ingredient.of(ModItemTags.DESH_INGOTS), 32),
                 IngredientHolder.of(Ingredient.of(ModItemTags.DESH_PLATES), 32)
             ),
-            Planet.EARTH_ORBIT,
+            ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "earth_orbit")),
             SPACE_STATION_STRUCTURE);
 
         createSpaceStation(writer, List.of(
@@ -175,7 +176,7 @@ public abstract class ModCustomRecipeProvider extends RecipeProvider {
                 IngredientHolder.of(Ingredient.of(ModItemTags.DESH_INGOTS), 32),
                 IngredientHolder.of(Ingredient.of(ModItemTags.DESH_PLATES), 32)
             ),
-            Planet.MOON_ORBIT,
+            ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "moon_orbit")),
             SPACE_STATION_STRUCTURE);
 
         createSpaceStation(writer, List.of(
@@ -184,7 +185,7 @@ public abstract class ModCustomRecipeProvider extends RecipeProvider {
                 IngredientHolder.of(Ingredient.of(ModItemTags.OSTRUM_INGOTS), 32),
                 IngredientHolder.of(Ingredient.of(ModItemTags.OSTRUM_PLATES), 32)
             ),
-            Planet.MARS_ORBIT,
+            ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mars_orbit")),
             SPACE_STATION_STRUCTURE);
 
         createSpaceStation(writer, List.of(
@@ -193,7 +194,7 @@ public abstract class ModCustomRecipeProvider extends RecipeProvider {
                 IngredientHolder.of(Ingredient.of(ModItemTags.CALORITE_INGOTS), 32),
                 IngredientHolder.of(Ingredient.of(ModItemTags.CALORITE_PLATES), 32)
             ),
-            Planet.VENUS_ORBIT,
+            ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "venus_orbit")),
             SPACE_STATION_STRUCTURE);
 
         createSpaceStation(writer, List.of(
@@ -202,7 +203,7 @@ public abstract class ModCustomRecipeProvider extends RecipeProvider {
                 IngredientHolder.of(Ingredient.of(ModItemTags.CALORITE_INGOTS), 32),
                 IngredientHolder.of(Ingredient.of(ModItemTags.CALORITE_PLATES), 32)
             ),
-            Planet.MERCURY_ORBIT,
+            ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "mercury_orbit")),
             SPACE_STATION_STRUCTURE);
 
 
@@ -212,7 +213,34 @@ public abstract class ModCustomRecipeProvider extends RecipeProvider {
                 IngredientHolder.of(Ingredient.of(ModItemTags.OSTRUM_PLATES), 32),
                 IngredientHolder.of(Ingredient.of(ModItemTags.CALORITE_PLATES), 32)
             ),
-            Planet.GLACIO_ORBIT,
+            ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "glacio_orbit")),
+            SPACE_STATION_STRUCTURE);
+
+        createSpaceStation(writer, List.of(
+                IngredientHolder.of(Ingredient.of(ModItemTags.STEEL_PLATES), 32),
+                IngredientHolder.of(Ingredient.of(ModItemTags.DESH_INGOTS), 32),
+                IngredientHolder.of(Ingredient.of(ModItemTags.OSTRUM_PLATES), 32),
+                IngredientHolder.of(Ingredient.of(ModItemTags.CALORITE_PLATES), 32)
+            ),
+            ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "eos_orbit")),
+            SPACE_STATION_STRUCTURE);
+
+        createSpaceStation(writer, List.of(
+                IngredientHolder.of(Ingredient.of(ModItemTags.STEEL_PLATES), 32),
+                IngredientHolder.of(Ingredient.of(ModItemTags.DESH_INGOTS), 32),
+                IngredientHolder.of(Ingredient.of(ModItemTags.OSTRUM_PLATES), 32),
+                IngredientHolder.of(Ingredient.of(ModItemTags.CALORITE_PLATES), 32)
+            ),
+            ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "deimos_orbit")),
+            SPACE_STATION_STRUCTURE);
+
+        createSpaceStation(writer, List.of(
+                IngredientHolder.of(Ingredient.of(ModItemTags.STEEL_PLATES), 32),
+                IngredientHolder.of(Ingredient.of(ModItemTags.DESH_INGOTS), 32),
+                IngredientHolder.of(Ingredient.of(ModItemTags.OSTRUM_PLATES), 32),
+                IngredientHolder.of(Ingredient.of(ModItemTags.CALORITE_PLATES), 32)
+            ),
+            ResourceKey.create(Registries.DIMENSION, new ResourceLocation(AdAstra.MOD_ID, "trappist_1_e_orbit")),
             SPACE_STATION_STRUCTURE);
     }
 
