@@ -32,6 +32,7 @@ public class AdAstraClientFabric {
         onAddReloadListener();
         ClientTickEvents.START_CLIENT_TICK.register(AdAstraClient::clientTick);
         KeyBindingHelper.registerKeyBinding(AdAstraClient.KEY_TOGGLE_SUIT_FLIGHT);
+        KeyBindingHelper.registerKeyBinding(AdAstraClient.KEY_TOGGLE_SUIT_HOVER);
         KeyBindingHelper.registerKeyBinding(AdAstraClient.KEY_OPEN_RADIO);
         AdAstraClient.onRegisterParticles((particle, provider) -> ParticleFactoryRegistry.getInstance().register(particle, provider::create));
         AdAstraClient.onRegisterItemRenderers((item, renderer) -> BuiltinItemRendererRegistry.INSTANCE.register(item, renderer::renderByItem));

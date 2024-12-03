@@ -13,8 +13,8 @@ import net.minecraft.world.entity.player.Player;
 
 import java.util.function.Consumer;
 
-public record ServerboundSyncKeybindPacket(boolean jumping, boolean sprinting,
-                                           boolean suitFlightEnabled) implements Packet<ServerboundSyncKeybindPacket> {
+public record ServerboundSyncKeybindPacket(boolean jumping, boolean sprinting, boolean sneaking,
+                                           boolean suitFlightEnabled, boolean suitHoverEnabled) implements Packet<ServerboundSyncKeybindPacket> {
 
     public static final ServerboundPacketType<ServerboundSyncKeybindPacket> TYPE = new Type();
 
@@ -32,7 +32,9 @@ public record ServerboundSyncKeybindPacket(boolean jumping, boolean sprinting,
                 ObjectByteCodec.create(
                     ByteCodec.BOOLEAN.fieldOf(ServerboundSyncKeybindPacket::jumping),
                     ByteCodec.BOOLEAN.fieldOf(ServerboundSyncKeybindPacket::sprinting),
+                    ByteCodec.BOOLEAN.fieldOf(ServerboundSyncKeybindPacket::sneaking),
                     ByteCodec.BOOLEAN.fieldOf(ServerboundSyncKeybindPacket::suitFlightEnabled),
+                    ByteCodec.BOOLEAN.fieldOf(ServerboundSyncKeybindPacket::suitHoverEnabled),
                     ServerboundSyncKeybindPacket::new
                 )
             );
@@ -40,7 +42,7 @@ public record ServerboundSyncKeybindPacket(boolean jumping, boolean sprinting,
 
         @Override
         public Consumer<Player> handle(ServerboundSyncKeybindPacket packet) {
-            return player -> KeybindManager.set(player, packet.jumping(), packet.sprinting(), packet.suitFlightEnabled());
+            return player -> KeybindManager.set(player, packet.jumping(), packet.sprinting(), packet.sneaking, packet.suitFlightEnabled(), packet.suitHoverEnabled());
         }
     }
 }

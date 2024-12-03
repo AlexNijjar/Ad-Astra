@@ -37,6 +37,14 @@ public final class AdAstraConfigClient {
     public static boolean jetSuitEnabled = true;
 
     @ConfigEntry(
+        type = EntryType.BOOLEAN,
+        id = "jetSuitHoverEnabled",
+        translation = "Jet Suit Hover Enabled"
+    )
+    public static boolean jetSuitHoverEnabled = true;
+
+
+    @ConfigEntry(
         type = EntryType.INTEGER,
         id = "oxygenBarX",
         translation = "Oxygen Bar X"

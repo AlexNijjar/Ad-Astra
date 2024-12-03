@@ -72,16 +72,24 @@ public class JetSuitItem extends SpaceSuitItem implements BotariumEnergyItem<Wra
         if (!hasFullJetSuitSet(player)) return;
 
         if (!KeybindManager.suitFlightEnabled(player)) return;
-        if (!KeybindManager.jumpDown(player)) return;
         if (!canFly(player, stack)) return;
 
-        if (KeybindManager.sprintDown(player)) {
-            fullFlight(player);
-            consume(player, stack, 100, slotId);
-        } else {
-            upwardsFlight(player);
-            consume(player, stack, 50, slotId);
+        if (!KeybindManager.suitHoverEnabled(player)) {
+            if (!KeybindManager.jumpDown(player)) return;
+            if (KeybindManager.sprintDown(player)) {
+                fullFlight(player);
+                consume(player, stack, 100, slotId);
+            } else {
+                upwardsFlight(player);
+                consume(player, stack, 50, slotId);
+            }
+            return;
         }
+        double factor = -player.getDeltaMovement().y * (0.9 * Math.pow(1 - Math.abs(player.getDeltaMovement().y) / 3.92 /* terminal velocity */, 1.5));
+        player.addDeltaMovement(new Vec3(0, factor, 0));
+        consume(player, stack, 100, slotId);
+        if (KeybindManager.jumpDown(player)) player.addDeltaMovement(new Vec3(0, 0.25, 0));
+        if (KeybindManager.sneakDown(player)) player.addDeltaMovement(new Vec3(0, -0.25, 0));
     }
 
     protected void upwardsFlight(Player player) {
@@ -115,7 +123,7 @@ public class JetSuitItem extends SpaceSuitItem implements BotariumEnergyItem<Wra
     }
 
     protected boolean isFullFlightEnabled(Player player) {
-        return KeybindManager.suitFlightEnabled(player) && KeybindManager.jumpDown(player) && KeybindManager.sprintDown(player);
+        return KeybindManager.suitFlightEnabled(player) && KeybindManager.jumpDown(player) && KeybindManager.sprintDown(player) && !KeybindManager.suitHoverEnabled(player);
     }
 
     public static double sigmoidAcceleration(double t, double peakTime, double peakAcceleration, double initialAcceleration) {
@@ -127,7 +135,7 @@ public class JetSuitItem extends SpaceSuitItem implements BotariumEnergyItem<Wra
         if (!canFly(player, stack)) return;
         if (!hasFullJetSuitSet(player)) return;
         if (!KeybindManager.suitFlightEnabled(player)) return;
-        if (!KeybindManager.jumpDown(player) || (!KeybindManager.jumpDown(player) && !KeybindManager.sprintDown(player)))
+        if ((!KeybindManager.jumpDown(player) || (!KeybindManager.jumpDown(player) && !KeybindManager.sprintDown(player))) && !KeybindManager.suitHoverEnabled(player))
             return;
 
         spawnParticles(level, entity, model.rightArm.xRot + 0.05, entity.isFallFlying() ? 0.0 : 0.8, -0.45);
@@ -148,7 +156,7 @@ public class JetSuitItem extends SpaceSuitItem implements BotariumEnergyItem<Wra
             entity.getX() + forwardOffsetX + sideOffsetX,
             entity.getY() + yOffset,
             entity.getZ() + sideOffsetZ + forwardOffsetZ,
-            0, 0, 0);
+            0, KeybindManager.suitHoverEnabled((Player) entity) ? -0.5 : 0, 0);
     }
 
     @SuppressWarnings("unused") // Forge
@@ -169,6 +177,6 @@ public class JetSuitItem extends SpaceSuitItem implements BotariumEnergyItem<Wra
 
     @SuppressWarnings("unused") // Forge
     public boolean canElytraFly(ItemStack stack, LivingEntity entity) {
-        return entity instanceof Player player && canFly(player, stack) && isFullFlightEnabled(player);
+        return entity instanceof Player player && canFly(player, stack) && isFullFlightEnabled(player) && !KeybindManager.suitHoverEnabled(player);
     }
 }

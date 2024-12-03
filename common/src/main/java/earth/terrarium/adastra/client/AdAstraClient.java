@@ -67,6 +67,11 @@ public class AdAstraClient {
         InputConstants.KEY_V,
         ConstantComponents.AD_ASTRA_CATEGORY.getString());
 
+    public static final KeyMapping KEY_TOGGLE_SUIT_HOVER = new KeyMapping(
+        ConstantComponents.TOGGLE_SUIT_HOVER_KEY.getString(),
+        InputConstants.KEY_H,
+        ConstantComponents.AD_ASTRA_CATEGORY.getString());
+
     public static final KeyMapping KEY_OPEN_RADIO = new KeyMapping(
         ConstantComponents.OPEN_RADIO_KEY.getString(),
         InputConstants.KEY_R,
@@ -241,15 +246,25 @@ public class AdAstraClient {
                 player.displayClientMessage(AdAstraConfigClient.jetSuitEnabled ? ConstantComponents.SUIT_FLIGHT_ENABLED : ConstantComponents.SUIT_FLIGHT_DISABLED, true);
             }
 
+            if (KEY_TOGGLE_SUIT_HOVER.consumeClick()) {
+                AdAstraConfigClient.jetSuitHoverEnabled = !AdAstraConfigClient.jetSuitHoverEnabled;
+                Minecraft.getInstance().tell(() -> AdAstra.CONFIGURATOR.saveConfig(AdAstraConfigClient.class));
+                player.displayClientMessage(AdAstraConfigClient.jetSuitHoverEnabled ? ConstantComponents.SUIT_HOVER_ENABLED : ConstantComponents.SUIT_HOVER_DISABLED, true);
+            }
+
             KeybindManager.set(player,
                 options.keyJump.isDown(),
                 options.keySprint.isDown(),
-                AdAstraConfigClient.jetSuitEnabled);
+                options.keyShift.isDown(),
+                AdAstraConfigClient.jetSuitEnabled,
+                AdAstraConfigClient.jetSuitHoverEnabled);
 
             NetworkHandler.CHANNEL.sendToServer(new ServerboundSyncKeybindPacket(
                 options.keyJump.isDown(),
                 options.keySprint.isDown(),
-                AdAstraConfigClient.jetSuitEnabled
+                options.keyShift.isDown(),
+                AdAstraConfigClient.jetSuitEnabled,
+                AdAstraConfigClient.jetSuitHoverEnabled
             ));
         }
     }

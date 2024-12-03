@@ -50,6 +50,7 @@ public class AdAstraClientForge {
     @SubscribeEvent
     public static void onRegisterKeyBindings(RegisterKeyMappingsEvent event) {
         event.register(AdAstraClient.KEY_TOGGLE_SUIT_FLIGHT);
+        event.register(AdAstraClient.KEY_TOGGLE_SUIT_HOVER);
         event.register(AdAstraClient.KEY_OPEN_RADIO);
     }
 
