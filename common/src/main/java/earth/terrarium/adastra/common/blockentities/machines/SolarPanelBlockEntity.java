@@ -59,13 +59,33 @@ public class SolarPanelBlockEntity extends EnergyContainerMachineBlockEntity {
         return ChargeSlotType.POWER_ITEM;
     }
 
+
+    //// cemerson 20250105 | temp patch for solar panels not working in space at night 
+    //// Unsure if this 
+    //// OLD VERSION 
+    // @Override
+    // public void serverTick(ServerLevel level, long time, BlockState state, BlockPos pos) {
+    //     if (canFunction()) {
+    //         distributeToChargeSlots();
+    //         if (isDay()) generateEnergy(PlanetApi.API.getSolarPower(level));
+    //     }
+    // }
+    //// TEMP NEW VERSION (?)
+    private boolean isSpace = false;
+    private ServerLevel cachedSolarPanelsLevel = null;    
     @Override
     public void serverTick(ServerLevel level, long time, BlockState state, BlockPos pos) {
         if (canFunction()) {
-            distributeToChargeSlots();
-            if (isDay()) generateEnergy(PlanetApi.API.getSolarPower(level));
+            distributeToChargeSlots();            
+            if(cachedSolarPanelsLevel == null){                
+                cachedSolarPanelsLevel = level;
+                isSpace = PlanetApi.API.isSpace(cachedSolarPanelsLevel);                                    
+            }                        
+            if (isDay() || isSpace) {
+                generateEnergy(PlanetApi.API.getSolarPower(level));
+            }                                    
         }
-    }
+    }    
 
     @Override
     public void tickSideInteractions(BlockPos pos, Predicate<Direction> filter, List<ConfigurationEntry> sideConfig) {
