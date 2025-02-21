@@ -64,18 +64,22 @@ public abstract class WorldRendererMixin {
 	// Venus rain.
 	@Inject(method = "tickRainSplashing", at = @At("HEAD"), cancellable = true)
 	public void adastra_tickRainSplashing(Camera camera, CallbackInfo info) {
-		if(!ModUtils.isPlanet(this.client.world)) {
-			info.cancel();
-		}
-		WorldRendererAccessor worldRenderer = (WorldRendererAccessor) (Object) this;
-
-
-
 		MinecraftClient client = MinecraftClient.getInstance();
 		RegistryKey<World> world = client.world.getRegistryKey();
+		boolean isVenus = false;
 		for (SkyRenderer skyRenderer : AdAstraClient.skyRenderers) {
 			if (world.equals(skyRenderer.dimension()) && skyRenderer.weatherEffects().equals(WeatherEffects.VENUS)) {
-
+				isVenus = true;
+				break;
+			}
+		}
+		
+		if (!isVenus) {
+			return;
+		}		
+		
+				WorldRendererAccessor worldRenderer = (WorldRendererAccessor) (Object) this;
+	
 				float f = client.world.getRainGradient(1.0f) / (MinecraftClient.isFancyGraphicsOrBetter() ? 1.0f : 2.0f);
 				if (f <= 0.0f) {
 					return;
@@ -115,10 +119,6 @@ public abstract class WorldRendererMixin {
 						client.world.playSound((BlockPos) blockPos2, SoundEvents.WEATHER_RAIN, SoundCategory.WEATHER, 0.2f, 1.0f, false);
 					}
 				}
-				info.cancel();
-				break;
-			}
-		}
-		return;
+		info.cancel();
 	}
 }
