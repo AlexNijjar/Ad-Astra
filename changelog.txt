@@ -1,4 +1,1 @@
-- fixed guidebook not opening #256
-- fixed broken guis of some of the machine screens due to changed textures
-- allow tech reborn and modern industrialization oil to be used in the fuel refinery #258
-- fixed "Secrets Beneath" achievement #257
+- fixed rain sounds not being produced in overworld (#628)
